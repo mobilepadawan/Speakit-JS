@@ -26,4 +26,4 @@ In this first iteration you can use it by referencing it in the `<head>` section
 <script src="js/class.synthesis-beta.v1.0.0.js"></script>
 ```
 
-You don't need to use the JS `defer` attribute and you don't need to reference the library at the end of the HTML file. Use the `-min` version with only `2KB` of weight. 
+You don't need to use the JS `defer` attribute and you don't need to reference the library at the end of the HTML file. Use the `-min` version. It has only `2KB` of weight ⚖️. The NOT `minified` version is usually recommended for testing and improvement purposes. Also it has only `3 KB` of weight 🙂.
