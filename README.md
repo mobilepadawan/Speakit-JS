@@ -8,16 +8,23 @@ This library allows you to audibly reproduce any text from a web application, in
 ```
 
 ## SUMMARY
+⏳ WORK IN PROGRESS...
 
 1) [Installing SpeechUtils](#installing-speechutils)
 2) [How to use it](#how-to-use-it)
     * [utteranceRate property](#utterancerate-property)
     * [utterancePitch property](#utterancepitch-property)
-3) Some samples
-4) Compatibility
+    * [getVoices() method](#getvoices-method)
+3) [Some samples](#some-samples)
+4) [Compatibility](#compatibility)
+    * [Dekstop web browsers](#desktop-web-browsers)
+    * [Mobile web browsers](#mobile-web-browsers)
 5) How to contribute with its evolution
 6) License
 7) Contacting me
+
+<br>
+<hr>
 
 ### Installing SpeechUtils
 
@@ -32,6 +39,9 @@ You don't need to use the JS `defer` attribute and you don't need to reference t
 ```
 🔔 In the comming weeks you'll have an * ES6 Module * version of this library.
 ```
+
+<br>
+<hr>
 
 ### How to use it
 
@@ -94,4 +104,51 @@ You can use it to list the voices in a `combo select` and have the user choose w
 ```
 🔔 It is important to note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
 ```
+
+<br>
+<hr>
+
+### Some samples
+
+```
+🔔 We are building a ver simple sample. Come in a few weeks and test it.
+```
+
+<br>
+<hr>
+
+### Compatibility
+
+SpeechSynthesis API has a good compatibility with the most of web browsers because this JS API was born in 2014. See the web browsers list of compatibility below.
+
+
+#### Desktop Web browsers
+
+|Brand|Version|SpeechSynthesis available|
+|-|-|-|
+|Google Chrome|33+|✅|
+|Microsoft Edge|14+|✅|
+|Safari|7+|✅|
+|Mozilla Firefox|49+|✅|
+|Opera|21+|✅|
+|Samsung Internet|49+|✅|
+|Internet Explorer|?|⛔️|
+
+#### Mobile Web browsers
+
+|Brand|Version|SpeechSynthesis available|
+|-|-|-|
+|Chrome for Android|121+|✅|
+|Firefox for Android|122+|✅|
+|Samsung Internet|4-22|✅ `only in Samsung mobile devices`|
+|Samsung Internet|23|✅ `smartphones of any brand with this web browser installed`|
+|Microsoft Edge|14+|✅|
+|Safari on iOS - iPadOS|7+|✅|
+|Opera mobile-Mini|12+|⛔️|
+|Browser for Android|6+|⛔️|
+|KaiOS browser|2.5+|⛔️|
+|Android WebView|?|⛔️|
+|iOS WKWebView|?|⛔️|
+
+🔔 Please visit [Can I Use](https://caniuse.com/?search=SpeechS) website for the most recently updates.
 
