@@ -50,9 +50,6 @@ After referencing the Library into the HTML file of your project, you can config
 * urretancePitch
 * getVoices()
 
-<br>
-<hr>
-
 #### utteranceRate property
 
 The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents normal speed, while higher values will increase the speed and lower values will decrease the speed.
