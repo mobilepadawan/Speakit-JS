@@ -28,7 +28,7 @@ This library allows you to audibly reproduce any text from a web application, in
 
 ### Installing SpeechUtils
 
-You can install `SpeechUtils library` by downloading the JS Library from the `/SRC/` folder of this repository and copying the file into your web frontend project. In this first iteration you can use it by referencing it in the `<head>` section of the HTML file(s). 
+You can install `Speakit library` by downloading the JS Library from the `/SRC/` folder of this repository and copying the file into your web frontend project. In this first iteration you can use it by referencing it in the `<head>` section of the HTML file(s). 
 
 ```HTML
 <script src="js/Speakit-beta.v1.0.0.js"></script>
