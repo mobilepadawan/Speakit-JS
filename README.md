@@ -55,7 +55,7 @@ After referencing the Library into the HTML file of your project, you can config
 The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents normal speed, while higher values will increase the speed and lower values will decrease the speed.
 
 ```javascript
-    SpeechUtils.utteranceRate = 1.03
+    Speakit.utteranceRate = 1.03
 ```
 
 We recommend you use with a specific precission: (eg: `1.05` || `1.15`). This property is very sensitive. You must do a couple of tests according to the language selected.
@@ -74,7 +74,7 @@ Some languages going well with the value `1.0` and other languages needs a value
 The `utterancePitch` property defines the pitch of voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which can influence the perceived pitch of the voice.
 
 ```javascript
-    SpeechUtils.utterancePitch = 1.0
+    Speakit.utterancePitch = 1.0
 ```
 
 A value of `1.0` represents normal pitch, and higher or lower values will alter the tone of the voice. Configure this property value with patience, it is very sensitive.
@@ -91,7 +91,7 @@ A value of `1.0` represents normal pitch, and higher or lower values will alter 
 The `getVoices()` method is a static method of the `SpeechUtils` class that is used to get a list of voices available for speech synthesis in the browser.
 
 ```javascript
-    SpeechUtils.getVoices()
+    Speakit.getVoices()
 ```
 
 This method returns an array of `SpeechSynthesisVoice` objects, which represent the voices available to be used with the speech synthesizer.
