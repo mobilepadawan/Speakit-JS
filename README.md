@@ -99,6 +99,22 @@ The `getVoices()` method is a static method of the `Speakit` class that is used 
 ```
 
 This method returns an array of `SpeechSynthesisVoice` objects, which represent the voices available to be used with the speech synthesizer.
+
+```javascript
+    voice.lang // represents the property where you can watch the ISO code of any available language
+    /*
+        'es-MX' Español - México
+        'en-AU' English - Australian
+        'it-IT' Italian language
+    */
+
+   voice.name // represents the name given to the every voice.
+
+   /*
+    For example, according to web browser, some voices has a name as "Samantha", "Diego", "Karen", etcetera.
+   */
+```
+
 We recommend you to test the code sample bellow in `DevTools > Console` to see the complete list available in the web browser that you are coding and testing you webapp. This voices list may vary throw the different web browsers main engines.
 
 You can use it to list the voices in a `combo select` and gives the user to choose what type of voice and tone he/she want to use. Or if you build a closed application, you can set some voice automatically according to the locale declared in the web browser.
