@@ -39,8 +39,10 @@ class Speakit extends SpeechSynthesis {
             utterance.lang = lang || "en-GB"
             utterance.pitch = Speakit.utterancePitch || 1.0
             utterance.rate = Speakit.utteranceRate || 1.05
-            let voice = speechSynthesis.getVoices().find(v => v.name === nameOfVoice)
-            voice ? utterance.voice = voice : console.error(`The selected voice '${nameOfVoice}' is not avialable.`)
+            if (nameOfVoice) {
+                let voice = speechSynthesis.getVoices().find(v => v.name === nameOfVoice)
+                voice ? utterance.voice = voice : console.error(`The selected voice '${nameOfVoice}' is not avialable.`)
+            }
             utterance.onend = () => resolve()
             utterance.onerror = (error) => reject(error)
             speechSynthesis.speak(utterance)
