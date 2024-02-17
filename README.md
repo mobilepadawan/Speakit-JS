@@ -1,11 +1,11 @@
-# Speakit
+# Speakit JS
 A JavaScript library to an easiest implement of [Speech Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis).
 
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-red?style=for-the-badge&logo=javascript)
 
 ![MIT License](https://img.shields.io/npm/l/toastify-js)
 
-This library allows you to audibly reproduce any text from a web application, in different languages. Internally, uses the `SpeechSynthesis` API in combination with `SpeechSynthesisUtterance` API. It allows you to regulate the speed and pitch of the audio and select different voices (male or female) and different languages (*) and accents.
+This library allows you to audibly reproduce any text from a web application, in different languages. Internally, uses the `SpeechSynthesis` API in combination with `SpeechSynthesisUtterance` API. It also allows you to regulate the speed and pitch of the audio and to select different voices (male or female) from different languages (*) and accents.
 
 ```
 🔔 This product is in early beta phase. Please write me to report any bug you did found it.
