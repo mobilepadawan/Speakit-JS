@@ -159,7 +159,7 @@ function loadVoicesInSelect(languageSelect) {
 
 The `getVoices()` method is a process built with JS Promises. Take care and apply an effective control to the `.then()` and `.catch()` methods.
 
-#### Reproduce audibly a text
+#### Reproducing audibly text
 
 The `.readText()` method must receives the first two parameters. **The first parameter** is the text to reproduce. It can be a Static text as the sample below or, of course, a text provided by a textInput, textArea or another HTML element. Be sure to send a clean text. Do not send HTML tags or similar because of we do not know the unpredictable behaviour of the different voices.
 
