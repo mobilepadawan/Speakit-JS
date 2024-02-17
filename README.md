@@ -1,5 +1,5 @@
 # Speakit JS
-A JavaScript library to an easiest implement of [Speech Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis).
+Speakit JS is a JavaScript library to an easiest implement of [Speech Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis).
 
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-red?style=for-the-badge&logo=javascript)
 
@@ -109,15 +109,14 @@ This method returns an array of `SpeechSynthesisVoice` objects, which represent 
     */
 
    voice.name // represents the name given to the every voice.
-
    /*
     For example, according to web browser, some voices has a name as "Samantha", "Diego", "Karen", etcetera.
    */
 ```
 
-We recommend you to test the code sample bellow in `DevTools > Console` to see the complete list available in the web browser that you are coding and testing you webapp. This voices list may vary throw the different web browsers main engines.
+We recommend you to test the code sample bellow in `DevTools > Console` to see the complete voices list available in the web browser that you are coding and testing you webapp. This voices list may vary through the different web browsers main engines.
 
-You can use it to list the voices in a `combo select`, `HTML table` or another kind of web component and gives to the user the choice to choose what type of voice and tone he/she want to use. Or, if you build a closed application, you can set some voice automatically according to the locale declared in the web browser.
+You can use it to list the voices in an HTML `Combo Select` element, `HTML table` element, or another type of web component and gives to the user the choice to choose what type of voice and tone they want to use. Or, if you build a closed application, you can set some voice automatically according to the locale region configuration declared in the web browser.
 
 ```
 🔔 It is important to note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
@@ -159,29 +158,31 @@ function loadVoicesInSelect(languageSelect) {
 
 The `getVoices()` method is a process built with JS Promises. Take care and apply an effective control to the `.then()` and `.catch()` methods.
 
-#### Reproducing audibly text
+#### Reproducing an audibly text
 
-The `.readText()` method must receives the first two parameters. **The first parameter** is the text to reproduce. It can be a Static text as the sample below or, of course, a text provided by a textInput, textArea or another HTML element. Be sure to send a clean text. Do not send HTML tags or similar because of we do not know the unpredictable behaviour of the different voices.
+The `.readText()` method must receives the first two parameters. **The first parameter** is the text to reproduce. It can be a Static text as the sample below or, of course, a text provided by a textInput, textArea, or another HTML element. Be sure to send a clean text. Do not send HTML tags or similar because of we do not know the unpredictable behaviour of the different voices.
 
-**The second parameter** is the ISO code langugage for the selected voice: `es-MX`, `en-US`, `it-IT`.
+**The second parameter** is the ISO code language for the selected voice: `es-MX`, `en-US`, `it-IT`.
 
-**The third parameter** is optional and represents the voice object according the type of tone or accent selected by the available voice list. For example: you are using Microsoft Edge to test your webapp and select the `'en-HK'` as the language to reproduce audibly a text. In the voices available list, you select `'Microsoft Sam Online (Natural) - English (Hongkong)'`.
+**The third parameter** is optional and represents the voice object according the type of tone or accent selected by the available voice list. 
+For example: you are using `Microsoft Edge` to test your webapp and select the `en-HK` as the language to reproduce an audibly text. In the voices available list, you select `Microsoft Sam Online (Natural) - English (Hongkong)`.
 
-You can send this information as the third parameter and `Speakit JS` will try to acquire the `SpeechSynthesisUtterance` to reproduce audibly the accent according you selection. If you don't send this third parameter Speakit JS will select the default voice language to reproduce the text. 
+You can send this information as the third parameter and `Speakit JS` will try to acquire the `SpeechSynthesisUtterance` to reproduce audibly the accent according you selection. If you don't send this third parameter, Speakit JS will select the default voice language to reproduce the text. 
 
 ```javascript
-Speakit.readText("Hello to everyone. This is an audibly text to reproduce usingthe JS SpeechSynthesis.", 
+Speakit.readText("This is a text to an audibly reproduce through the JavaScript SpeechSynthesis.", 
                  "en-NZ", 
                  voiceName)
 .then(()=> console.log('Text succesfuly readed.') ) //you can do anything when the Speech synthesis finished.
 .catch((error)=> console.error('Error reading the text:', error) )
 ```
 
-The `.readText()` method works with JS Promises. You can add a .then Method to execute a JS code according the text audibly end its reproduction.
+The `.readText()` method works with JS Promises. You can add a `.then()` method to execute a JS code according the text audibly end its reproduction.
 
 
 ```
-🔔 We are building some more simple samples. Come in a few weeks and test it.
+🔔 We are building some more simple samples. 
+Come in a few weeks and test it.
 ```
 
 <br>
@@ -189,7 +190,7 @@ The `.readText()` method works with JS Promises. You can add a .then Method to e
 
 ### Compatibility
 
-SpeechSynthesis API has a good compatibility with the most of web browsers because this JS API was born in 2014. See the web browsers list of compatibility below.
+SpeechSynthesis API has a good compatibility with the most of web browsers because this JS API was born in 2014. You can see the web browsers list of compatibility below.
 
 
 #### Desktop Web browsers
@@ -222,4 +223,3 @@ SpeechSynthesis API has a good compatibility with the most of web browsers becau
 |iOS WKWebView|?|⛔️|
 
 🔔 Please visit [Can I Use](https://caniuse.com/?search=SpeechS) website for the most recently updates.
-
