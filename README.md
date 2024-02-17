@@ -162,7 +162,7 @@ SpeechSynthesis API has a good compatibility with the most of web browsers becau
 |Samsung Internet|23|✅ `smartphones of any brand with this web browser installed`|
 |Microsoft Edge|14+|✅|
 |Safari on iOS - iPadOS|7+|✅|
-|Other web browsers on iOS - iPadOS|?|`🚧 Until Apple allows other web engines on iOS and iPadOS, any web browser you install on these mobile devices is required to use the Safari web browser engine.`|
+|Other web browsers on iOS - iPadOS|?|🚧 `Until Apple allows other web engines on iOS and iPadOS, any web browser you install on these mobile devices is required to use the Safari web browser engine.`|
 |Opera mobile-Mini|12+|⛔️|
 |Browser for Android|6+|⛔️|
 |KaiOS browser|2.5+|⛔️|
