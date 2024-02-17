@@ -62,7 +62,7 @@ The `utteranceRate` property defines the playback rate of spoken text using the 
     Speakit.utteranceRate = 1.03
 ```
 
-We recommend you use with a specific precission: (eg: `1.05` || `1.15`). This property is very sensitive. You must do a couple of tests according to the language selected.
+We recommend you use with a specific precission: (eg: `1.05` || `1.15`). This property is very sensitive. You should face a couple of tests according to the language selected.
 
 Some languages going well with the value `1.0` and other languages needs a value little higher.
 
