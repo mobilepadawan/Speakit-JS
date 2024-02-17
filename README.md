@@ -38,7 +38,7 @@ You can install `Speakit library` by downloading the JS Library from the `/SRC/`
 <script src="js/Speakit-beta.v1.0.0.js"></script>
 ```
 
-You don't need to use the JS `defer` attribute and you don't need to reference the library at the end of the HTML file. Use the `-min` version. It has only `2KB` of weight ⚖️. The NOT `minified` version is usually recommended for testing and improvement purposes. Also it has only `3 KB` of weight 🙂.
+You don't need to use the JS `defer` attribute and you don't need to reference the library at the bottom of an HTML file. Use the `-min` version. It has only `2KB` of weight ⚖️. The NOT `minified` version is usually recommended for testing and improvement purposes. It also has only `3 KB` of weight 🙂.
 
 ```
 🔔 In the comming weeks you'll have an * ES6 Module * version of this library.
@@ -92,15 +92,16 @@ A value of `1.0` represents normal pitch, and higher or lower values will alter 
 
 #### getVoices() method
 
-The `getVoices()` method is a static method of the `SpeechUtils` class that is used to get a list of voices available for speech synthesis in the browser.
+The `getVoices()` method is a static method of the `Speakit` class that is used to get a list of voices available for speech synthesis in the web browser.
 
 ```javascript
-    Speakit.getVoices()
+    Speakit.getVoices().then(voices => console.table(voices))
 ```
 
 This method returns an array of `SpeechSynthesisVoice` objects, which represent the voices available to be used with the speech synthesizer.
+We recommend you to test the code sample bellow in `DevTools > Console` to see the complete list available in the web browser that you are coding and testing you webapp. This voices list may vary throw the different web browsers main engines.
 
-You can use it to list the voices in a `combo select` and have the user choose what type of voice and tone they want to use. Or if you build a closed application, you can set some voice automatically according to the locale declared in the web browser.
+You can use it to list the voices in a `combo select` and gives the user to choose what type of voice and tone he/she want to use. Or if you build a closed application, you can set some voice automatically according to the locale declared in the web browser.
 
 ```
 🔔 It is important to note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
