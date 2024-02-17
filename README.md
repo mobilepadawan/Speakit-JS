@@ -170,7 +170,7 @@ The `.readText()` method must receives the first two parameters. **The first par
 You can send this information as the third parameter and `Speakit JS` will try to acquire the `SpeechSynthesisUtterance` to reproduce audibly the accent according you selection. If you don't send this third parameter Speakit JS will select the default voice language to reproduce the text. 
 
 ```javascript
-Speakit.readText("Hello to everyone. This is an audibly text to reproduce throw the JavaScript SpeechSynthesis.", 
+Speakit.readText("Hello to everyone. This is an audibly text to reproduce usingthe JS SpeechSynthesis.", 
                  "en-NZ", 
                  voiceName)
 .then(()=> console.log('Text succesfuly readed.') ) //you can do anything when the Speech synthesis finished.
