@@ -30,9 +30,9 @@ This library allows you to audibly reproduce any text from a web application, in
 <br>
 <hr>
 
-### Installing SpeechUtils
+### Installing Speakit JS
 
-You can install `Speakit library` by downloading the JS Library from the `/SRC/` folder of this repository and copying the file into your web frontend project. In this first iteration you can use it by referencing it in the `<head>` section of the HTML file(s). 
+You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying the file into your web frontend project. In this first iteration you can use it by referencing it in the `<head>` section of the HTML file(s). 
 
 ```HTML
 <script src="js/Speakit-beta.v1.0.0.js"></script>
@@ -117,7 +117,7 @@ This method returns an array of `SpeechSynthesisVoice` objects, which represent 
 
 We recommend you to test the code sample bellow in `DevTools > Console` to see the complete list available in the web browser that you are coding and testing you webapp. This voices list may vary throw the different web browsers main engines.
 
-You can use it to list the voices in a `combo select` and gives the user to choose what type of voice and tone he/she want to use. Or if you build a closed application, you can set some voice automatically according to the locale declared in the web browser.
+You can use it to list the voices in a `combo select`, `HTML table` or another kind of web component and gives to the user the choice to choose what type of voice and tone he/she want to use. Or, if you build a closed application, you can set some voice automatically according to the locale declared in the web browser.
 
 ```
 🔔 It is important to note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
@@ -128,8 +128,60 @@ You can use it to list the voices in a `combo select` and gives the user to choo
 
 ### Some samples
 
+#### How to get the list of available voices
+
+Add a Select HTML element and configure to receive a list of voices to show.
+```html
+<select id="language-select">
+    <option value="">Pick a language</option>
+</select>
 ```
-🔔 We are building a ver simple sample. Come in a few weeks and test it.
+
+Make a DOM link with the select HTML element.
+
+Create a function to get all the available voices, iterate them and load the voice list in the Select HTML element.
+```javascript
+const languageSelect = document.getElementById('language-select')
+
+function loadVoicesInSelect(languageSelect) {
+    Speakit.getVoices().then((voices)=> {
+        if (voices.length > 0) {
+          voices.forEach((voice)=> {
+            languageSelect.innerHTML += `<option value="${voice.lang}" data-voice="${voice.name}">
+                                            (${voice.lang}) - ${voice.name}
+                                        </option>`
+          })
+        }
+    })
+    .catch((error)=> console.error('Error loading the available voices:', error) )
+}
+```
+
+The `getVoices()` method is a process built with JS Promises. Take care and apply an effective control to the `.then()` and `.catch()` methods.
+
+#### Reproduce audibly a text
+
+The `.readText()` method must receives the first two parameters. **The first parameter** is the text to reproduce. It can be a Static text as the sample below or, of course, a text provided by a textInput, textArea or another HTML element. Be sure to send a clean text. Do not send HTML tags or similar because of we do not know the unpredictable behaviour of the different voices.
+
+**The second parameter** is the ISO code langugage for the selected voice: `es-MX`, `en-US`, `it-IT`.
+
+**The third parameter** is optional and represents the voice object according the type of tone or accent selected by the available voice list. For example: you are using Microsoft Edge to test your webapp and select the `'en-HK'` as the language to reproduce audibly a text. In the voices available list, you select `'Microsoft Sam Online (Natural) - English (Hongkong)'`.
+
+You can send this information as the third parameter and `Speakit JS` will try to acquire the `SpeechSynthesisUtterance` to reproduce audibly the accent according you selection. If you don't send this third parameter Speakit JS will select the default voice language to reproduce the text. 
+
+```javascript
+Speakit.readText("Hello to everyone. This is an audibly text to reproduce throw the JavaScript SpeechSynthesis.", 
+                 "en-NZ", 
+                 voiceName)
+.then(()=> console.log('Text succesfuly readed.') ) //you can do anything when the Speech synthesis finished.
+.catch((error)=> console.error('Error reading the text:', error) )
+```
+
+The `.readText()` method works with JS Promises. You can add a .then Method to execute a JS code according the text audibly end its reproduction.
+
+
+```
+🔔 We are building some more simple samples. Come in a few weeks and test it.
 ```
 
 <br>
