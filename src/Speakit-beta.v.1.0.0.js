@@ -5,40 +5,40 @@ class Speakit extends SpeechSynthesis {
     static totalVoices = []
 
     static #getAvailableVoices() {
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             if ('speechSynthesis' in window) {
-                let voices = speechSynthesis.getVoices();
+                let voices = speechSynthesis.getVoices()
                 if (voices.length > 0) {
-                    voices.sort((a, b) => a.lang.localeCompare(b.lang));
-                    Speakit.totalAvailableVoices = voices.length;
-                    resolve(voices);
+                    voices.sort((a, b) => a.lang.localeCompare(b.lang))
+                    this.totalAvailableVoices = voices.length
+                    resolve(voices)
                 } else {
                     speechSynthesis.onvoiceschanged = () => {
-                        voices = speechSynthesis.getVoices();
-                        voices.sort((a, b) => a.lang.localeCompare(b.lang));
-                        Speakit.totalAvailableVoices = voices.length;
-                        resolve(voices);
-                    };
+                        voices = speechSynthesis.getVoices()
+                        voices.sort((a, b) => a.lang.localeCompare(b.lang))
+                        this.totalAvailableVoices = voices.length
+                        resolve(voices)
+                    }
                 }
             } else {
-                reject('SpeechSynthesis API is not available in this web browser.');
+                reject('SpeechSynthesis API is not available in this web browser.')
             }
-        });
+        })
     }
 
     static async getVoices() {
-        if (Speakit.totalVoices.length === 0) {
-            Speakit.totalVoices = await Speakit.#getAvailableVoices();
+        if (this.totalVoices.length === 0) {
+            this.totalVoices = await this.#getAvailableVoices()
         }
-        return Speakit.totalVoices;
+        return this.totalVoices
     }
 
     static readText(text, lang, nameOfVoice) {
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             const utterance = new SpeechSynthesisUtterance(text)
             utterance.lang = lang || "en-GB"
-            utterance.pitch = Speakit.utterancePitch || 1.0
-            utterance.rate = Speakit.utteranceRate || 1.05
+            utterance.rate = this.utteranceRate || 1.05
+            utterance.pitch = this.utterancePitch || 1.0
             if (nameOfVoice) {
                 let voice = speechSynthesis.getVoices().find(v => v.name === nameOfVoice)
                 voice ? utterance.voice = voice : console.error(`The selected voice '${nameOfVoice}' is not avialable.`)
@@ -58,25 +58,25 @@ class Speakit extends SpeechSynthesis {
     }
 
     static pauseSpeaking() {
-        speechSynthesis.pause();
+        speechSynthesis.pause()
     }
 
     static resumeSpeaking() {
-        speechSynthesis.resume();
+        speechSynthesis.resume()
     }
 
     static stopSpeaking() {
         try {
-            Speakit.pauseSpeaking()
+            this.pauseSpeaking()
             speechSynthesis.cancel(e)
         } catch (error) {
             console.warn("Speaking cancelled by the App.")
-            return 
+            return
         }
     }
 
     static about() {
-        return `Copyright 2024-02-08: Fernando Omar Luna - @ mobile padawan. We are in `beta` yet.
+        return `Copyright 2024-02-08: Fernando Omar Luna - @ mobile padawan.
 
         Send me an email to (ferproonline at gmail dot com) or DMme by Twitter/X (@ mobile padawan) just to tell me what kind of use you are giving to this class and/or just to 'say Hi!'.
 
