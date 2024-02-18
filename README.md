@@ -5,7 +5,7 @@ Speakit JS is a JavaScript library to an easiest implement of [Speech Synthesis 
 
 ![MIT License](https://img.shields.io/npm/l/toastify-js)
 
-This library allows you to audibly reproduce any text from a web application, in different languages. Internally, uses the `SpeechSynthesis` API in combination with `SpeechSynthesisUtterance` API. It also allows you to regulate the speed and pitch of the audio and to select different voices (male or female) from different languages (*) and accents.
+This library enables you to audibly reproduce any text from a web application in various languages. It utilizes the `SpeechSynthesis` API along with the `SpeechSynthesisUtterance` API to regulate the audio speed, pitch, and voice selection (male or female) across different languages (*) and accents.
 
 ```
 🔔 This product is in early beta phase. Please write me to report any bug you did found it.
@@ -19,6 +19,7 @@ This library allows you to audibly reproduce any text from a web application, in
     * [utteranceRate property](#utterancerate-property)
     * [utterancePitch property](#utterancepitch-property)
     * [getVoices() method](#getvoices-method)
+    * [Some ISO languages](#some-iso-languages)
 3) [Some samples](#some-samples)
 4) [Compatibility](#compatibility)
     * [Dekstop web browsers](#desktop-web-browsers)
@@ -32,13 +33,13 @@ This library allows you to audibly reproduce any text from a web application, in
 
 ### Installing Speakit JS
 
-You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying the file into your web frontend project. In this first iteration you can use it by referencing it in the `<head>` section of the HTML file(s). 
+You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s).
 
 ```HTML
 <script src="js/Speakit-beta.v1.0.0.js"></script>
 ```
 
-You don't need to use the JS `defer` attribute and you don't need to reference the library at the bottom of an HTML file. Use the `-min` version. It has only `2KB` of weight ⚖️. The NOT `minified` version is usually recommended for testing and improvement purposes. It also has only `3 KB` of weight 🙂.
+You don't need to use the `defer` attribute for the script tag, and there's no need to reference the library at the bottom of an HTML file. The minified version has a weight of only `2KB` ⚖️, making it lightweight. The unminified version, recommended for testing and improvement purposes, has a weight of only `3KB` 🙂.
 
 ```
 🔔 In the comming weeks you'll have an * ES6 Module * version of this library.
@@ -50,24 +51,24 @@ You don't need to use the JS `defer` attribute and you don't need to reference t
 ### How to use it
 
 After referencing the Library into the HTML file of your project, you can configure some properties to a better audio performance.
-* utteranceRate
-* urretancePitch
-* getVoices()
+* **utteranceRate**
+* **utterancePitch**
+* **getVoices()**
 
 #### utteranceRate property
 
-The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents normal speed, while higher values will increase the speed and lower values will decrease the speed.
+The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents **normal speed**, while higher values will increase the speed and lower values will decrease it.
 
 ```javascript
     Speakit.utteranceRate = 1.03
 ```
 
-We recommend you use with a specific precission: (eg: `1.05` || `1.15`). This property is very sensitive. You should face a couple of tests according to the language selected.
+We recommend using a specific precision, for example, `1.05` or `1.15`. This property is very sensitive, so you should conduct several tests based on the selected language.
 
-Some languages going well with the value `1.0` and other languages needs a value little higher.
+Some languages work well with the value `1.0` while others may require a slightly higher value.
 
 ```
-🔔 The default value is set in 1.05. It is not mandatory to configure a value unless you find the voice picked some fast or it sound distortionated.
+🔔 The default value is set in 1.05. It is not mandatory to configure a value unless you find the voice speaking too quickly or sounding distorted.
 ```
 
 <br>
@@ -75,16 +76,16 @@ Some languages going well with the value `1.0` and other languages needs a value
 
 #### utterancePitch property
 
-The `utterancePitch` property defines the pitch of voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which can influence the perceived pitch of the voice.
+The `utterancePitch` property defines the pitch of the voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which can affect the perceived pitch of the voice.
 
 ```javascript
     Speakit.utterancePitch = 1.0
 ```
 
-A value of `1.0` represents normal pitch, and higher or lower values will alter the tone of the voice. Configure this property value with patience, it is very sensitive.
+A value of `1.0` represents normal pitch, while higher or lower values will alter the tone of the voice. Configure this property value with patience, as it is very sensitive.
 
 ```
-🔔 The default value is set in 1.05. It is not mandatory to configure a value unless you find the voice picked some fast or it sound distortionated.
+🔔 The default value is set in 1.05. It is not mandatory to configure a value unless you find the voice speaking too quickly or sounding distorted.
 ```
 
 <br>
@@ -92,13 +93,13 @@ A value of `1.0` represents normal pitch, and higher or lower values will alter 
 
 #### getVoices() method
 
-The `getVoices()` method is a static method of the `Speakit` class that is used to get a list of voices available for speech synthesis in the web browser.
+The `getVoices()` method is a static method of the `Speakit` class used to retrieve a list of available voices for speech synthesis in the web browser.
 
 ```javascript
     Speakit.getVoices().then(voices => console.table(voices))
 ```
 
-This method returns an array of `SpeechSynthesisVoice` objects, which represent the voices available to be used with the speech synthesizer.
+This method returns an array of SpeechSynthesisVoice objects representing the voices available for use with the speech synthesizer.
 
 ```javascript
     voice.lang // represents the property where you can watch the ISO code of any available language
@@ -114,12 +115,24 @@ This method returns an array of `SpeechSynthesisVoice` objects, which represent 
    */
 ```
 
-We recommend you to test the code sample bellow in `DevTools > Console` to see the complete voices list available in the web browser that you are coding and testing you webapp. This voices list may vary through the different web browsers main engines.
+I recommend testing the code sample below in `DevTools > Console` to view the complete list of voices available in the web browser you are using to code and test your web app. Please note that this list of voices may vary across different web browser engines.
 
-You can use it to list the voices in an HTML `Combo Select` element, `HTML table` element, or another type of web component and gives to the user the choice to choose what type of voice and tone they want to use. Or, if you build a closed application, you can set some voice automatically according to the locale region configuration declared in the web browser.
+#### Some ISO languages
+
+|ISO Code|Description|
+|-|-|
+|pt-PT|Portugues - Portugal|
+|pt-BR|Portugues - Brasil|
+|es-MX|Español - Mexico|
+|en-US|English - United States|
+|en-BR|English - Great Britain|
+|en-AU|English - Australia|
+|en-HK|English - Hong Kong|
+
+You can use it to populate a list of voices in an HTML `Combo Select` element, an `HTML table` element, or another type of web component, allowing users to choose their preferred voice and tone. Alternatively, for closed applications, you can automatically set a voice based on the locale region configuration declared in the user's web browser.
 
 ```
-🔔 It is important to note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
+🔔 Please note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
 ```
 
 <br>
@@ -129,16 +142,16 @@ You can use it to list the voices in an HTML `Combo Select` element, `HTML table
 
 #### How to get the list of available voices
 
-Add a Select HTML element and configure to receive a list of voices to show.
+Add a Select HTML element to configure it to display a list of voices:
 ```html
 <select id="language-select">
     <option value="">Pick a language</option>
 </select>
 ```
 
-Make a DOM link with the select HTML element.
+Next, create a DOM link with the `Select` HTML element.
 
-Create a function to get all the available voices, iterate them and load the voice list in the Select HTML element.
+Then, create a function to retrieve all available voices, iterate through them, and populate the voice list in the Select HTML element with the voice list:
 ```javascript
 const languageSelect = document.getElementById('language-select')
 
@@ -156,18 +169,17 @@ function loadVoicesInSelect(languageSelect) {
 }
 ```
 
-The `getVoices()` method is a process built with JS Promises. Take care and apply an effective control to the `.then()` and `.catch()` methods.
+The `getVoices()` method is asynchronous and utilizes JS Promises. Ensure effective error handling using the `.then()` and `.catch()` methods.
 
-#### Reproducing an audibly text
+#### Reproducing Audible Text
 
-The `.readText()` method must receives the first two parameters. **The first parameter** is the text to reproduce. It can be a Static text as the sample below or, of course, a text provided by a textInput, textArea, or another HTML element. Be sure to send a clean text. Do not send HTML tags or similar because of we do not know the unpredictable behaviour of the different voices.
+The `.readText()` method requires the first two parameters. **The first parameter** is the text to be reproduced. It can be a static text as shown in the sample below or, alternatively, text provided by a `textInput`, `textArea`, or another HTML element. Ensure that the text is clean and does not contain HTML tags or similar, as different voices may exhibit unpredictable behavior.
 
-**The second parameter** is the ISO code language for the selected voice: `es-MX`, `en-US`, `it-IT`.
+**The second parameter** is the ISO language code for the selected voice: `es-MX`, `en-US`, `it-IT`.
 
-**The third parameter** is optional and represents the voice object according the type of tone or accent selected by the available voice list. 
-For example: you are using `Microsoft Edge` to test your webapp and select the `en-HK` as the language to reproduce an audibly text. In the voices available list, you select `Microsoft Sam Online (Natural) - English (Hongkong)`.
+**The third parameter** is optional and represents the voice object corresponding to the selected tone or accent from the available voice list. For example, if you are using `Microsoft Edge` to test your webapp and select `en-HK` as the language to reproduce audible text, you may choose  `Microsoft Sam Online (Natural) - English (Hongkong)`.
 
-You can send this information as the third parameter and `Speakit JS` will try to acquire the `SpeechSynthesisUtterance` to reproduce audibly the accent according you selection. If you don't send this third parameter, Speakit JS will select the default voice language to reproduce the text. 
+You can provide this information as the third parameter, and `Speakit JS` will attempt to retrieve the `SpeechSynthesisUtterance` to audibly reproduce the accent according to your selection. If you do not provide this third parameter, `Speakit JS` will use the default voice language to reproduce the text. 
 
 ```javascript
 Speakit.readText("This is a text to an audibly reproduce through the JavaScript SpeechSynthesis.", 
@@ -177,7 +189,7 @@ Speakit.readText("This is a text to an audibly reproduce through the JavaScript 
 .catch((error)=> console.error('Error reading the text:', error) )
 ```
 
-The `.readText()` method works with JS Promises. You can add a `.then()` method to execute a JS code according the text audibly end its reproduction.
+The `.readText()` method operates using JavaScript Promises. You can chain a `.then()` method to execute a JavaScript code after the text has been audibly reproduce.
 
 
 ```
@@ -190,8 +202,7 @@ Come in a few weeks and test it.
 
 ### Compatibility
 
-SpeechSynthesis API has a good compatibility with the most of web browsers because this JS API was born in 2014. You can see the web browsers list of compatibility below.
-
+SpeechSynthesis API boasts good compatibility with most of web browsers, as it was introduced in 2014. Below, you can find a list of web browsers that support this JS API.
 
 #### Desktop Web browsers
 
