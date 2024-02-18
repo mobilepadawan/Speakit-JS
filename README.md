@@ -42,7 +42,8 @@ You can install `Speakit JS library` by downloading the JS Library from the `/SR
 You don't need to use the `defer` attribute for the script tag, and there's no need to reference the library at the bottom of an HTML file. The minified version has a weight of only `2KB` ⚖️, making it lightweight. The unminified version, recommended for testing and improvement purposes, has a weight of only `3KB` 🙂.
 
 ```
-🔔 In the comming weeks you'll have an * ES6 Module * version of this library.
+🔔 In the comming weeks you'll have
+an ES6 Module * version of this library.
 ```
 
 <br>
@@ -60,7 +61,7 @@ After referencing the Library into the HTML file of your project, you can config
 The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents **normal speed**, while higher values will increase the speed and lower values will decrease it.
 
 ```javascript
-    Speakit.utteranceRate = 1.03
+  Speakit.utteranceRate = 1.03
 ```
 
 We recommend using a specific precision, for example, `1.05` or `1.15`. This property is very sensitive, so you should conduct several tests based on the selected language.
@@ -68,7 +69,8 @@ We recommend using a specific precision, for example, `1.05` or `1.15`. This pro
 Some languages work well with the value `1.0` while others may require a slightly higher value.
 
 ```
-🔔 The default value is set in 1.05. It is not mandatory to configure a value unless you find the voice speaking too quickly or sounding distorted.
+🔔 The default value is set in 1.05. It is not mandatory to configure
+a value unless you find the voice speaking too quickly or sounding distorted.
 ```
 
 <br>
@@ -79,13 +81,14 @@ Some languages work well with the value `1.0` while others may require a slightl
 The `utterancePitch` property defines the pitch of the voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which can affect the perceived pitch of the voice.
 
 ```javascript
-    Speakit.utterancePitch = 1.0
+  Speakit.utterancePitch = 1.0
 ```
 
 A value of `1.0` represents normal pitch, while higher or lower values will alter the tone of the voice. Configure this property value with patience, as it is very sensitive.
 
 ```
-🔔 The default value is set in 1.05. It is not mandatory to configure a value unless you find the voice speaking too quickly or sounding distorted.
+🔔 The default value is set in 1.05. It is not mandatory to configure a
+value unless you find the voice speaking too quickly or sounding distorted.
 ```
 
 <br>
@@ -96,23 +99,24 @@ A value of `1.0` represents normal pitch, while higher or lower values will alte
 The `getVoices()` method is a static method of the `Speakit` class used to retrieve a list of available voices for speech synthesis in the web browser.
 
 ```javascript
-    Speakit.getVoices().then(voices => console.table(voices))
+  Speakit.getVoices().then(voices => console.table(voices))
 ```
 
 This method returns an array of SpeechSynthesisVoice objects representing the voices available for use with the speech synthesizer.
 
 ```javascript
-    voice.lang // represents the property where you can watch the ISO code of any available language
-    /*
-        'es-MX' Español - México
-        'en-AU' English - Australian
-        'it-IT' Italian language
-    */
+  voice.lang // represents the property where you can watch the ISO code of any available language
+  /*
+    'es-MX' Español - México
+    'en-AU' English - Australian
+    'it-IT' Italian language
+  */
 
-   voice.name // represents the name given to the every voice.
-   /*
-    For example, according to web browser, some voices has a name as "Samantha", "Diego", "Karen", etcetera.
-   */
+  voice.name // represents the name given to the every voice.
+  /*
+    For example, according to web browser, some voices
+    has a name as "Samantha", "Diego", "Karen", etcetera.
+  */
 ```
 
 I recommend testing the code sample below in `DevTools > Console` to view the complete list of voices available in the web browser you are using to code and test your web app. Please note that this list of voices may vary across different web browser engines.
@@ -132,7 +136,8 @@ I recommend testing the code sample below in `DevTools > Console` to view the co
 You can use it to populate a list of voices in an HTML `Combo Select` element, an `HTML table` element, or another type of web component, allowing users to choose their preferred voice and tone. Alternatively, for closed applications, you can automatically set a voice based on the locale region configuration declared in the user's web browser.
 
 ```
-🔔 Please note that voice availability may vary depending on the user's browser and the operating system where the web app is running.
+🔔 Please note that voice availability may vary depending on the user's
+web browser and the operating system where the web app is running.
 ```
 
 <br>
@@ -145,7 +150,7 @@ You can use it to populate a list of voices in an HTML `Combo Select` element, a
 Add a Select HTML element to configure it to display a list of voices:
 ```html
 <select id="language-select">
-    <option value="">Pick a language</option>
+  <option value="">Pick a language</option>
 </select>
 ```
 
@@ -156,16 +161,16 @@ Then, create a function to retrieve all available voices, iterate through them, 
 const languageSelect = document.getElementById('language-select')
 
 function loadVoicesInSelect(languageSelect) {
-    Speakit.getVoices().then((voices)=> {
-        if (voices.length > 0) {
-          voices.forEach((voice)=> {
-            languageSelect.innerHTML += `<option value="${voice.lang}" data-voice="${voice.name}">
-                                            (${voice.lang}) - ${voice.name}
-                                        </option>`
-          })
-        }
-    })
-    .catch((error)=> console.error('Error loading the available voices:', error) )
+  Speakit.getVoices().then((voices)=> {
+    if (voices.length > 0) {
+      voices.forEach((voice)=> {
+        languageSelect.innerHTML += `<option value="${voice.lang}" data-voice="${voice.name}">
+                                       (${voice.lang}) - ${voice.name}
+                                     </option>`
+         })
+      }
+  })
+  .catch((error)=> console.error('Error loading the available voices:', error) )
 }
 ```
 
@@ -185,7 +190,7 @@ You can provide this information as the third parameter, and `Speakit JS` will a
 Speakit.readText("This is a text to an audibly reproduce through the JavaScript SpeechSynthesis.", 
                  "en-NZ", 
                  voiceName)
-.then(()=> console.log('Text succesfuly readed.') ) //you can do anything when the Speech synthesis finished.
+.then(()=> console.log('Text succesfuly readed.') ) //you can do something after the Speech synthesis finished.
 .catch((error)=> console.error('Error reading the text:', error) )
 ```
 
@@ -194,7 +199,7 @@ The `.readText()` method operates using JavaScript Promises. You can chain a `.t
 
 ```
 🔔 We are building some more simple samples. 
-Come in a few weeks and test it.
+   Come in a few weeks and test it.
 ```
 
 <br>
