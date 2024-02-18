@@ -190,7 +190,7 @@ You can provide this information as the third parameter, and `Speakit JS` will a
 Speakit.readText("This is a text to an audibly reproduce through the JavaScript SpeechSynthesis.", 
                  "en-NZ", 
                  voiceName)
-.then(()=> console.log('Text succesfuly readed.') ) //you can do something after the Speech synthesis finished.
+.then(()=> console.log('Text succesfuly readed.') ) //do something after the Speech synthesis finished.
 .catch((error)=> console.error('Error reading the text:', error) )
 ```
 
