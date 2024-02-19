@@ -14,7 +14,7 @@ This library enables you to audibly reproduce any text from a web application in
 ## SUMMARY
 ⏳ WORK IN PROGRESS...
 
-1) [Installing SpeechUtils](#installing-speechutils)
+1) [Installing Speakit JS](#installing-speakit-js)
 2) [How to use it](#how-to-use-it)
     * [utteranceRate property](#utterancerate-property)
     * [utterancePitch property](#utterancepitch-property)
