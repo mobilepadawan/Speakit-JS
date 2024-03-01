@@ -5,79 +5,77 @@
     <meta charset="UTF-8">
     <title>Speak-it JavaScript Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/speak-64.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <script src="../Speakit-beta.v1.0.0.min.js"></script>
     <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
-    <div class="theme-picker">
-        <div class="emoji sun" title="Click to select Light Theme">☀️</div>
-        <div class="emoji moon" title="Click to select Dark Theme">🌘</div>
-    </div>
-    <header>
-        <img class="img-logo" src="images/toaster-icon.png" alt="Toaster Icon (Copyrighted by Freepik)">
-        <h1 id="titulo">Speak-it JavaScript Library</h1>
-        <p>Speakit JS is a JavaScript library to an easiest implement of <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Speech Synthesis API</a>.</p>
-    </header>
-    <main>
-        <section>
-            <article>
-                <div class="image-sample">
-                    <img src="images/speak-64.png" alt="Toast-It sample code">
+    <div class="contenedor">
+        <div class="theme-picker">
+            <div class="emoji sun" title="Click to select Light Theme">☀️</div>
+            <div class="emoji moon" title="Click to select Dark Theme">🌘</div>
+        </div>
+        <header>
+            <img class="img-logo" src="images/speak-64.png" alt="Toaster Icon (Copyrighted by Freepik)">
+            <h1 id="titulo">Speak-it JavaScript Library</h1>
+            <p><strong>Speakit JS</strong> is a JavaScript library to an easiest implement of <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Speech Synthesis API</a>.</p>
+            <p>This web API let you take a sentence or paragraph written like this, and make it audible through the JavaScript native API. Every modern web browser has the capability to speech any text in many languages. In the link 👆 previously shared you'll find the version compatibility according to the different browsers available.</p>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <div class="image-sample">
+                        <img src="images/speak-64.png" alt="Toast-It sample code">
+                        <hr>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2>How does it works?</h2>
+                    <p><strong>First of all add the reference to the Speakit-JS library in your HTML document.</strong></p>
+                    <img src="images/referencing-speakit-js.png" alt="Referencing Speakit-JS" class="image-code">
+                    <p>We always recommend the <code>Minified version</code> of its library but, of course, you can use the unminified version in a Development Stage. Both of them are <a href="https://github.com/mobilepadawan/Speakit-JS/tree/main/src" target="_blank">available in our Github Repo</a>.</p> 
+                    <h3>Reading a text</h3>
+                    <p>In the JavaScript logic file of your webapp, add the following line of code.</p>
+                    <img src="images/speakit-js-quick-sample.png" alt="Reading a text with Speakit-JS" class="image-code">
+                    <p><code>Speakit</code> is the JavaScript Object wich is built the native JS API and it offers a couple of methods. The most important method is <code>.readText()</code> which waits for at least two parameters:</p>
+                    <ol>
+                        <li>The text or sentence to read.</li>
+                        <li>The ISO language code related to the text.</li>
+                    </ol>
+                    <p>With only two parameters you are ready to listen to a text or sentence in the language specificed.</p>
                     <hr>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>Generic message</h2>
-                <p>A very simple generic message. This tone is using the default colour for the background. If you miss
-                    to configure the style, this tone will be shown by default.</p>
-                <button class="button-generic">Generic Message</button>
-                <hr>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>Notification message</h2>
-                <p>This message is using the classic blue colour to represent a very simple notification. You can pick
-                    to show or not a closing button at the end of the message.</p>
-                <button class="button-notification">Notification Message</button>
-                <hr>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>Success message</h2>
-                <p>This message is using the classic green colour to represent a success notification. You can pick to
-                    show or not a closing button at the end of the message.</p>
-                <button class="button-success">Success Message</button>
-                <hr>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>Warning message</h2>
-                <p>This message is using the classic warning colour to represent a warning or a caution notification.
-                    You can pick to show or not a closing button at the end of the message.</p>
-                <p>Warning messages are using by default a <strong>font-weight=700</strong> to get a better message
-                    reading.</p>
-                <button class="button-warning">Warning Message</button>
-                <hr>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>Error message</h2>
-                <p>This message is using the red colour to represent an error message. You can pick to show or not a
-                    closing button at the end of the message.</p>
-                <p>Error messages are using by default a <strong>font-weight=700</strong> to get a better message
-                    reading.</p>
-                <button class="button-error">Error Message</button>
-            </article>
-        </section>
-    </main>
+                </article>
+            </section>
+            <section>
+                <article class="sample-container">
+                    <h3>Take a look of Speakit-JS library here</h3>
+                    <label for="inputText">
+                        <input type="text" id="inputText" placeholder="Write a text or sentence here...">
+                    </label>
+                    <label for="selectedLanguage">
+                        <select name="" id="selectedLanguage">
+                            <option selected disabled>Pick an ISO language code</option>
+                            <option>en-CA</option>
+                            <option>en-GB</option>
+                            <option>en-US</option>
+                            <option>es-ES</option>
+                            <option>es-MX</option>
+                            <option>es-AR</option>
+                            <option>it-IT</option>
+                            <option>pt-PT</option>
+                            <option>pt-BR</option>
+                        </select>
+                    </label>
+                    <button id="buttonRead">Listen to the sentence</button>
+                </article>
+            </section>
+            <hr>
+        </main>
+    </div>
 </body>
 
 </html>

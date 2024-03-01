@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css');
-@import url('../src/developer/toastitv1.0.css');
 
 html {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -8,15 +7,41 @@ html {
 }
 
 p,
+code,
+li,
 select,
 input,
 span, div {
     font-size: large;
 }
 
+ol {
+    margin-left: 20px;
+}
+
 table {
     width: 90% !important;
     margin-left: 5%;
+}
+
+.sample-container {
+    margin: 0 auto;
+    width: 700px;
+    padding: 20px;
+    border: 1px solid lightblue;
+    border-radius: 6px;
+    box-shadow: 2px 8px 10px rgb(70, 70, 70);
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 760px;
+    padding: 0 20px;
+}
+
+header,
+main {
+  text-align: left;
 }
 
 .emoji-image {
@@ -52,6 +77,10 @@ div.image-sample img {
     display: flex;
     align-items: end;
     align-content: stretch;
+}
+
+.image-code {
+    width: 600px;
 }
 
 .emoji {
@@ -138,46 +167,37 @@ div.image-sample img {
     border-color: darkred !important;
 }
 
-@media (min-width: 901px) {    
-    div.image-sample img {
-        width: 700px;
-        height: 500px;
-    }
-}
-
 @media (max-width: 900px) {
     div.theme-picker {
         display: none;
     }
-    
-    div.image-sample img {
-        width: 500px;
-        height: 408px;
-    }
 }
 
 @media (max-width: 720px) {
+    .contenedor {
+        max-width: 100%;
+    }
+
+    .sample-container {
+        max-width: 100%;
+    }
+
     div.theme-picker {
         display: none;
-    }
-    
-    div.image-sample img {
-        width: 400px;
-        height: 314px;
     }
 }
 
 @media (min-width: 600px) {
+    .contenedor {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
     h1#titulo {
         text-align: center;
     }
 
     img.img-logo {
         display: none;
-    }
-    
-    div.image-sample img {
-        width: 100%;
-        height: 100%;
     }
 }
