@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speak-it JavaScript Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="../Speakit-beta.v1.0.0.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </head>
+
 <body>
+    <div class="theme-picker">
+        <div class="emoji sun" title="Click to select Light Theme">☀️</div>
+        <div class="emoji moon" title="Click to select Dark Theme">🌘</div>
+    </div>
     <header>
-        <div class="header">
-            <h1>Speak-it JavaScript Library</h1>
-        </div>
+        <img class="img-logo" src="images/toaster-icon.png" alt="Toaster Icon (Copyrighted by Freepik)">
+        <h1 id="titulo">Speak-it JavaScript Library</h1>
+        <p>Speakit JS is a JavaScript library to an easiest implement of <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Speech Synthesis API</a>.</p>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section>
+            <article>
+                <div class="image-sample">
+                    <img src="images/speak-64.png" alt="Toast-It sample code">
+                    <hr>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Generic message</h2>
+                <p>A very simple generic message. This tone is using the default colour for the background. If you miss
+                    to configure the style, this tone will be shown by default.</p>
+                <button class="button-generic">Generic Message</button>
+                <hr>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Notification message</h2>
+                <p>This message is using the classic blue colour to represent a very simple notification. You can pick
+                    to show or not a closing button at the end of the message.</p>
+                <button class="button-notification">Notification Message</button>
+                <hr>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Success message</h2>
+                <p>This message is using the classic green colour to represent a success notification. You can pick to
+                    show or not a closing button at the end of the message.</p>
+                <button class="button-success">Success Message</button>
+                <hr>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Warning message</h2>
+                <p>This message is using the classic warning colour to represent a warning or a caution notification.
+                    You can pick to show or not a closing button at the end of the message.</p>
+                <p>Warning messages are using by default a <strong>font-weight=700</strong> to get a better message
+                    reading.</p>
+                <button class="button-warning">Warning Message</button>
+                <hr>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Error message</h2>
+                <p>This message is using the red colour to represent an error message. You can pick to show or not a
+                    closing button at the end of the message.</p>
+                <p>Error messages are using by default a <strong>font-weight=700</strong> to get a better message
+                    reading.</p>
+                <button class="button-error">Error Message</button>
+            </article>
+        </section>
+    </main>
 </body>
+
 </html>
