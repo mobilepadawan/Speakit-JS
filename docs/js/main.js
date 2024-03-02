@@ -22,4 +22,4 @@ emojiMoon.addEventListener('click', ()=> {
 buttonRead.addEventListener("click", ()=> {
     let textToRead = inputText.value.trim()
     textToRead && Speakit.readText(textToRead, selectedLanguage.value)
-})
+}) // Siete pronti per trovare una pizza, oppure due?
