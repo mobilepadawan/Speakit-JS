@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Speech Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/voice-64.png" type="image/png">
+    <meta name="description" content="Speakit JS is a JavaScript library designed to facilitate the implementation of the Speech Synthesis API.">
+    <link rel="canonical" href="https://mobilepadawan.github.io/Speakit-JS">
+    <meta name="author" content="Fernando Omar Luna - alias @mobilepadawan">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/speech-synthesis.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Text to Speech Library</h1>
+            <img src="images/voice-64.png" height="64px" width="64px" alt="Text to Speech" >
+        </div>
+    </header>
+    <main>
+        <section>
+            <details>
+                <summary>🔔 Quick helping guide:</summary>
+                <p>Its functionality is very simple. Just write a text or paste it into the text area and press Enter, pick a language from the combo select, and click the Read Button to playback.</p>
+                <p>If you want to filter the extensive language list, just type the ISO CODE of your favourite language in the input search field. The WebApp will just filter the available languages according to your typed prefference.</p>
+                <p>Here you have some sample of ISO languages CODE:</p>
+                <ul>
+                    <li><strong>pt:</strong> Portuguese</li>
+                    <li><strong>en:</strong> English</li>
+                    <li><strong>es:</strong> Español</li>
+                    <li><strong>it:</strong> Italian</li>
+                </ul>
+                <p>Delete the filtering text from the X option in the search field to restore the complete list of ISO languages CODE.</p>
+            </details>
+            <label for="input-filter">
+                <input type="search" id="input-filter" placeholder="Write a filter like 'es' or 'it' and press Enter">
+            </label>
+            <label for="language-select">
+                <select id="language-select">
+                </select>
+            </label>
+            <label for="text-input">
+                <textarea placeholder="Add or paste a text or sentence." id="text-input" class="text-area text-blue bg-lightgray"></textarea>
+            </label>
+            <button id="read-button" title="Speak the text added in the textarea.">Read</button>
+            <button id="pause-button" title="Pause or Resume the current speaking">Pause</button>
+            <button id="cancel-button" title="Cancel the speaking of the text">Stop</button>
+        </section>
+    </main>
+    <script src="js/Speakit-beta.v1.0.0.min.js"></script>
+</body>
+</html>
