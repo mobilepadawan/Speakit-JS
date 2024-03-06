@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speak-it JS: a JavaScript Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/speak-64.png" type="image/png">
+    <meta name="description" content="Speakit JS is a JavaScript library designed to facilitate the implementation of the Speech Synthesis API.">
+    <link rel="canonical" href="https://mobilepadawan.github.io/Speakit-JS">
+    <meta name="author" content="Fernando Omar Luna">
+    <!-- OpenGraph Metatags --> 
+    <meta property="og:title" content="Speak-it JS: a JavaScript Library">
+    <meta property="og:description" content="Speakit JS is a JavaScript library designed to facilitate the implementation of the Speech Synthesis API.">
+    <meta property="og:image" content="https://mobilepadawan.github.io/Speakit-JS/images/speakit-js-quick-sample.webp">
+    <meta property="og:url" content="https://mobilepadawan.github.io/Speakit-JS">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Metatags -->
+    <meta name="twitter:card" content="https://mobilepadawan.github.io/Speakit-JS/images/speak-512.png">
+    <meta name="twitter:title" content="Speak-it JS: a JavaScript Library">
+    <meta name="twitter:description" content="Speakit JS is a JavaScript library designed to facilitate the implementation of the Speech Synthesis API.">
+    <meta name="twitter:image" content="https://mobilepadawan.github.io/Speakit-JS/images/speakit-js-quick-sample.webp">
+    <!-- Robots Metatag -->
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="ttsl/js/Speakit-beta.v1.0.0.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="theme-picker">
+            <div class="emoji sun" title="Click to select Light Theme">😎</div>
+            <div class="emoji moon" title="Click to select Dark Theme">🧛</div>
+        </div>
+        <header>
+            <h1 id="titulo">Speak-it JS: a JavaScript Library</h1>
+            <p><strong>Speakit JS</strong> is a JavaScript library to an easiest implement of <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Speech Synthesis API</a>.</p>
+            <div class="image-sample">
+                <img src="images/speak-64.webp" alt="Toast-It sample code">
+            </div>
+            <p>This web API let you take a sentence or paragraph written like this, and make it audible through the JavaScript native API. Every modern web browser has the capability to speech any text in many languages. In the link 👆 previously shared you'll find the version compatibility according to the different web browsers available in the market.</p>
+            <p>Can't wait to try it out the Full Experiencie? <a href="ttsl/index.html">Come here 👀</a></p>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <h2>How does it works?</h2>
+                    <p><strong>First of all add the reference to the Speakit-JS library in your HTML document.</strong></p>
+                    <img src="images/referencing-speakit-js.webp" alt="Referencing Speakit-JS" class="image-code">
+                    <p>We always recommend the <code>Minified version</code> of its library but, of course, you can use the unminified version in a Development Stage. Both of them are <a href="https://github.com/mobilepadawan/Speakit-JS/tree/main/src" target="_blank">available in our Github Repo</a>.</p> 
+                    <h3>Reading a text</h3>
+                    <p>In the JavaScript logic file of your webapp, add the following line of code.</p>
+                    <img src="images/speakit-js-quick-sample.webp" alt="Reading a text with Speakit-JS" class="image-code">
+                    <p><code>Speakit</code> is the JS Object wich is built the native JS API and it offers a couple of methods. The most important method is <code>.readText()</code> which waits for at least two parameters:</p>
+                    <ol>
+                        <li>The text or sentence to read.</li>
+                        <li>The ISO language code related to the text.</li>
+                    </ol>
+                    <p>With only two parameters you are ready to listen to a text or sentence in the specificed language.</p>
+                    <hr>
+                </article>
+            </section>
+            <section>
+                <article class="sample-container">
+                    <h3>Take a look of Speakit-JS library here</h3>
+                    <label for="inputText">
+                        <input type="text" id="inputText" placeholder="Write a text or sentence here..." autocomplete="off" >
+                    </label>
+                    <label for="selectedLanguage">Pick an ISO language code
+                        <select name="" id="selectedLanguage">
+                            <option selected disabled>...</option>
+                            <option>en-CA</option>
+                            <option>en-GB</option>
+                            <option>en-US</option>
+                            <option>es-ES</option>
+                            <option>es-MX</option>
+                            <option>es-AR</option>
+                            <option>it-IT</option>
+                            <option>pt-PT</option>
+                            <option>pt-BR</option>
+                        </select>
+                    </label>
+                    <button id="buttonRead">Listen it</button>
+                </article>
+            </section>
+            <hr>
+            <section>
+                <article>
+                    <h2>Change the voice tone</h2>
+                    <p>The Speech Synthesis API le you pick a language using the language ISO code and also to pick a specific tone for the voice. For example, you can choose between a female, male, or even a child or granma/grandpa voices.</p>
+                    <p>This feature is available as a part of the native API. Using <code>Speakit-JS Library</code> you can easily access to the list of voices available in the web browser's JS Core using <code>.getVoices()</code> method.</p>
+                    <img src="images/speakit-js-getvoices.webp" loading="lazy" alt="Accessing to the available voices" class="image-code">
+                    <p><em>This is a method ruled by a Promise. You can use it with <code>.then()</code> Control Method or via <code>Async-Await</code> clausules.</em></p>
+                    <img src="images/speakit-js-async.webp" alt="Accessing to the voices using Async-Await" class="image-code">
+                    <p>🔔 Every web browser has a limited type of voices available beyond the generic voices. Generic voices used in some samples could sound kind of a robotic voice in some web browsers, always depending the ISO language code picked, but, there are available another type of voices which can sound very much natural, like a human voice.</p>
+                    <p>Watch the following sample of the voices available in Microsoft Edge, Google Chrome, and Safari Browser.</p>
+                    <video src="https://ferpro.online/media/voices-available-speakit.mp4" alt="List of voices returned" controls width="100%" preload="auto"></video>
+                    <!-- <img src="images/list-of-voices.gif" alt="List of voices returned" class="image-code"> -->
+                    <p><em>This object array can be different when you check in other browsers. This image was captured in Microsoft Edge Developer Tools.</em></p>
+                    <p>The <code>.getVoices()</code> method returns an object array with all the available voices in the web browser.</p>
+                    <ul>
+                        <li><code>lang:</code> the <strong>lang</strong> property returns the ISO language code previously mentioned.</li>
+                        <li><code>name:</code> the <strong>name</strong> property returns the different voice tones that let you customized your WebApp to listen to a specific voice.</li>
+                    </ul>
+                    <h3>Including a customized voice</h3>
+                    <p>The <code>.readText()</code> method supports a third parameter which is waiting for a custom voice. Here you can use the name property previously mentioned.</p>
+                    <img src="images/speakit-three-params.webp" alt="Customizing voice" class="image-code">
+                    <p>Take a few minutes to check the properties of this array to know what you can show to the user and to configure properly a customized voice tone for your project.</p>
+                    <p><em>🔔 It is mandatory to check the available voices according the web browser you are coding for, because there are different voices and options. Some of them can work offline but another ones needs to the browser online to work fine.</em></p>
+
+                </article>
+                <hr>
+                <article>
+                    <h2>Advanced features</h2>
+                    <p><strong>Speak-it JS Library</strong> includes a couple of features for the fine tuning of the voice. Watch here how many options you have available to use.</p>
+                    <h3>Voice tone and speed</h3>
+                    <p><code>Speakit-JS Library</code> also includes two properties to adjust the tone and speed of the selected voice.</p>
+                    <h4>Voice tone</h4>
+                    <p>The <code>.utteranceRate</code> property defines the playback speed of the spoken text using the speech synthesizer (using the <code>.speakText()</code> method). This property determines the the rate at which words will be pronounced. A value of 1.0 represents normal speed, while higher values will increase the speed and lower values will decrease the speed.</p>
+                    <p><em>After a couple of test during the building of this library, we defined to set the default value in <strong>1.05</strong></em>. We recommend you try a couple of tests accordind to the voice or voices selected to your project before setting another value to this property.</p>
+                    <h4>Voice pitch</h4>
+                    <p>The <code>.utterancePitch</code> property defines the pitch of the voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which may influence the perceived tone of the voice. A value of <strong>1.0</strong> represents normal pitch, and higher or lower values will alter the voice's pitch.</p>
+                    <img src="images/speakit-js-rate-pitch.webp" alt="Setting rate and pitch property before speaking" class="image-code">
+                <hr>
+                </article>
+                <article>
+                    <h2>Controlling the playback while speaking</h2>
+                    <p><strong>Speakit-JS Library</strong> also includes a couple of methods for controlling the spoken text during the playback of it. Here you have the methods and its role:</p>
+                    <ul>
+                        <li><code>.pauseSpeaking()</code>: this method let you pauses the text when it is playback.</li>
+                        <li><code>.resumeSpeaking()</code>: this method let you continues the playback previously paused.</li>
+                        <li><code>.stopSpeaking()</code>: this method cancels the current playback.</li>
+                    </ul>
+                    <p>And for checking if a text is currently playback or its paused, there you have another two methods available:</p>
+                    <ul>
+                        <li><code>.isSpeaking()</code>: Returns true or false depending on whether there is text being played back.</li>
+                        <li><code>.isPaused()</code>: Returns true or false depending on whether text playback is paused.</li>
+                    </ul>
+                <hr>
+                <p>🔔 If you clicked a <code>button</code> tuice for starting to playback a text, the second click will going to a playback queue and will be reproduced after the first one playback finished. This is a behaviour proper of the Native API. We recommend you to control it through your code.</p>
+                <hr>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2>More information</h2>
+                    <p>If you are looking for more information and samples, please visit our Github Repo located at <a href="https://github.com/mobilepadawan/Speakit-JS" target="_blank">Speakit-JS</a>. You will find information about the <strong>Speakit JS Library</strong> compatibility with desktop and mobile web browsers.</p>
+                    <p>For <strong>technical information</strong> about this native API we recommend to check the official information of <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Speech Synthesis and Utterance</a>.</p></p>
+                    <p>For a fully functional sample, please download our <a href="https://github.com/mobilepadawan/artificial-intelligence/" target="_blank">Text To Speech Library</a> sample located in the <strong>Artificial Intelligence</strong> Github repo.</p>
+                    <p>For more information, <a href="mailto:ferproonline@gmail.com?subject=About Speakit-JS library">send me an email</a> 📧 or <a href="https://ferpro.online/">visit my website</a> to know more about me.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
