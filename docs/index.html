@@ -35,7 +35,7 @@
             <h1 id="titulo">Speak-it JS: a JavaScript Library</h1>
             <p><strong>Speakit JS</strong> is a JavaScript library to an easiest implement of <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Speech Synthesis API</a>.</p>
             <div class="image-sample">
-                <img src="images/speak-64.png" alt="Toast-It sample code">
+                <img src="images/speak-64.webp" alt="Toast-It sample code">
             </div>
             <p>This web API let you take a sentence or paragraph written like this, and make it audible through the JavaScript native API. Every modern web browser has the capability to speech any text in many languages. In the link 👆 previously shared you'll find the version compatibility according to the different web browsers available in the market.</p>
             <hr>
@@ -45,11 +45,11 @@
                 <article>
                     <h2>How does it works?</h2>
                     <p><strong>First of all add the reference to the Speakit-JS library in your HTML document.</strong></p>
-                    <img src="images/referencing-speakit-js.png" alt="Referencing Speakit-JS" class="image-code">
+                    <img src="images/referencing-speakit-js.webp" alt="Referencing Speakit-JS" class="image-code">
                     <p>We always recommend the <code>Minified version</code> of its library but, of course, you can use the unminified version in a Development Stage. Both of them are <a href="https://github.com/mobilepadawan/Speakit-JS/tree/main/src" target="_blank">available in our Github Repo</a>.</p> 
                     <h3>Reading a text</h3>
                     <p>In the JavaScript logic file of your webapp, add the following line of code.</p>
-                    <img src="images/speakit-js-quick-sample.png" alt="Reading a text with Speakit-JS" class="image-code">
+                    <img src="images/speakit-js-quick-sample.webp" alt="Reading a text with Speakit-JS" class="image-code">
                     <p><code>Speakit</code> is the JS Object wich is built the native JS API and it offers a couple of methods. The most important method is <code>.readText()</code> which waits for at least two parameters:</p>
                     <ol>
                         <li>The text or sentence to read.</li>
@@ -88,12 +88,13 @@
                     <h2>Change the voice tone</h2>
                     <p>The Speech Synthesis API le you pick a language using the language ISO code and also to pick a specific tone for the voice. For example, you can choose between a female, male, or even a child or granma/grandpa voices.</p>
                     <p>This feature is available as a part of the native API. Using <code>Speakit-JS Library</code> you can easily access to the list of voices available in the web browser's JS Core using <code>.getVoices()</code> method.</p>
-                    <img src="images/speakit-js-getvoices.png" loading="lazy" alt="Accessing to the available voices" class="image-code">
+                    <img src="images/speakit-js-getvoices.webp" loading="lazy" alt="Accessing to the available voices" class="image-code">
                     <p><em>This is a method ruled by a Promise. You can use it with <code>.then()</code> Control Method or via <code>Async-Await</code> clausules.</em></p>
-                    <img src="images/speakit-js-async.png" alt="Accessing to the voices using Async-Await" class="image-code">
+                    <img src="images/speakit-js-async.webp" alt="Accessing to the voices using Async-Await" class="image-code">
                     <p>🔔 Every web browser has a limited type of voices available beyond the generic voices. Generic voices used in some samples could sound kind of a robotic voice in some web browsers, always depending the ISO language code picked, but, there are available another type of voices which can sound very much natural, like a human voice.</p>
-                    <p>Watch the following sample of the voices available in Microsoft Edge.</p>
-                    <img src="images/list-of-voices.gif" alt="List of voices returned" class="image-code">
+                    <p>Watch the following sample of the voices available in Microsoft Edge, Google Chrome, and Safari Browser.</p>
+                    <video src="https://ferpro.online/media/voices-available-speakit.mp4" alt="List of voices returned" controls width="100%" preload="auto"></video>
+                    <!-- <img src="images/list-of-voices.gif" alt="List of voices returned" class="image-code"> -->
                     <p><em>This object array can be different when you check in other browsers. This image was captured in Microsoft Edge Developer Tools.</em></p>
                     <p>The <code>.getVoices()</code> method returns an object array with all the available voices in the web browser.</p>
                     <ul>
@@ -102,7 +103,7 @@
                     </ul>
                     <h3>Including a customized voice</h3>
                     <p>The <code>.readText()</code> method supports a third parameter which is waiting for a custom voice. Here you can use the name property previously mentioned.</p>
-                    <img src="images/speakit-three-params.png" alt="Customizing voice" class="image-code">
+                    <img src="images/speakit-three-params.webp" alt="Customizing voice" class="image-code">
                     <p>Take a few minutes to check the properties of this array to know what you can show to the user and to configure properly a customized voice tone for your project.</p>
                     <p><em>🔔 It is mandatory to check the available voices according the web browser you are coding for, because there are different voices and options. Some of them can work offline but another ones needs to the browser online to work fine.</em></p>
 
@@ -118,7 +119,7 @@
                     <p><em>After a couple of test during the building of this library, we defined to set the default value in <strong>1.05</strong></em>. We recommend you try a couple of tests accordind to the voice or voices selected to your project before setting another value to this property.</p>
                     <h4>Voice pitch</h4>
                     <p>The <code>.utterancePitch</code> property defines the pitch of the voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which may influence the perceived tone of the voice. A value of <strong>1.0</strong> represents normal pitch, and higher or lower values will alter the voice's pitch.</p>
-                    <img src="images/speakit-js-rate-pitch.png" alt="Setting rate and pitch property before speaking" class="image-code">
+                    <img src="images/speakit-js-rate-pitch.webp" alt="Setting rate and pitch property before speaking" class="image-code">
                 <hr>
                 </article>
                 <article>
