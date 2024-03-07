@@ -9,7 +9,6 @@ const applyThemePicked = ()=> localStorage.getItem('themePicked') || 'auto'
 // Main function
 document.documentElement.style.setProperty('color-scheme', applyThemePicked())
 
-
 emojiSun.addEventListener('click', ()=> {
     document.documentElement.style.setProperty('color-scheme', 'Light')
     localStorage.setItem('themePicked', 'Light')
@@ -21,5 +20,5 @@ emojiMoon.addEventListener('click', ()=> {
 
 buttonRead.addEventListener("click", ()=> {
     let textToRead = inputText.value.trim()
-    textToRead && Speakit.readText(textToRead, selectedLanguage.value)
+    textToRead && Speakit.readText(textToRead, selectedLanguage.value) 
 }) // Siete pronti per trovare una pizza, oppure due?

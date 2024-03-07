@@ -26,11 +26,15 @@ table {
 
 .sample-container {
     margin: 0 auto;
-    width: 700px;
+    width: 600px;
     padding: 20px;
     border: 1px solid lightblue;
     border-radius: 6px;
     box-shadow: 2px 8px 10px rgb(70, 70, 70);
+    margin-bottom: 20px;
+    & input, select {
+        width: 90%;
+    }
 }
 
 .contenedor {
@@ -39,9 +43,15 @@ table {
     padding: 0 20px;
 }
 
-header,
-main {
+header, main {
   text-align: left;
+}
+
+details {
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 16px;
 }
 
 .emoji-image {
@@ -179,7 +189,7 @@ div.image-sample img {
     }
 
     .sample-container {
-        max-width: 100%;
+        max-width: 80%;
     }
 
     div.theme-picker {
