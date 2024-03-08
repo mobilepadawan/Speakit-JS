@@ -12,7 +12,7 @@ This library enables you to audibly reproduce any text from a web application in
 ```
 
 ```
-🔔 ~This product is in early beta phase. Please write me to report any bug you did found it.~
+🔔 ~~This product is in early beta phase. Please write me to report any bug you did found it.~~
 ```
 
 For a **not-so-technical hands-on**, please visit the [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick guide and a Demo to test the Speakit-JS functionality.
