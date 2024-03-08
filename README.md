@@ -8,7 +8,11 @@ Speakit JS is a JavaScript library to an easiest implement of [Speech Synthesis 
 This library enables you to audibly reproduce any text from a web application in various languages. It utilizes the `SpeechSynthesis` API along with the `SpeechSynthesisUtterance` API to regulate the audio speed, pitch, and voice selection (male or female) across different languages (*) and accents.
 
 ```
-🔔 This product is in early beta phase. Please write me to report any bug you did found it.
+🔔 We are exiting of early beta phase and entereing in a Release Candidate version. Stay tuned!
+```
+
+```
+🔔 ~This product is in early beta phase. Please write me to report any bug you did found it.~
 ```
 
 For a **not-so-technical hands-on**, please visit the [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick guide and a Demo to test the Speakit-JS functionality.
