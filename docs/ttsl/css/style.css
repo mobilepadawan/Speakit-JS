@@ -75,6 +75,10 @@ button {
   margin-bottom: 20px;
 }
 
+button:disabled {
+  filter: opacity(.3);
+}
+
 button:hover {
   background-color: #eee;
 }
