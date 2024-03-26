@@ -27,6 +27,7 @@ function loadVoicesInSelect(languageSelect) {
     .catch((error)=> console.error('Error loading the available voices:', error) )
 }
 
+
 function mainFunction() {
     languageSelect.innerHTML = returnHTMLdefaultOption()
     loadVoicesInSelect(languageSelect)
@@ -53,10 +54,14 @@ textFilter.addEventListener("search", async ()=> {
     document.body.style.cursor = "auto"
 })
 
-function readTextWithSelectedLanguage(textInput, languageSelect, voiceName) {
+function readTextWithSelectedLanguage(textInput, languageSelect, voiceName, disableEl) {
     if (languageSelect && textInput) {
+        disableEl.setAttribute("disabled", "true")
         Speakit.readText(textInput, languageSelect, voiceName)
-        .then(()=> console.log('Text succesfuly readed.') )
+        .then(()=> {
+            console.log('Text succesfuly readed.')
+            disableEl.removeAttribute("disabled")
+        })
         .catch((error)=> console.error('Error reading the text:', error) )
     } else {
         console.error('Please, select a language, an accent, and write a text.')
@@ -66,7 +71,8 @@ function readTextWithSelectedLanguage(textInput, languageSelect, voiceName) {
 readButton.addEventListener("click", ()=> {
     readTextWithSelectedLanguage(textInput.value.trim(), 
                                  languageSelect.value, 
-                                 languageSelect[languageSelect.selectedIndex].dataset.voice)
+                                 languageSelect[languageSelect.selectedIndex].dataset.voice,
+                                 readButton)
 })
 
 pauseButton.addEventListener("click", ()=> {
