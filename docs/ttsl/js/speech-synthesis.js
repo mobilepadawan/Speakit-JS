@@ -18,15 +18,17 @@ function returnHTMLVoiceOption(voice) {
 }
 
 function loadVoicesInSelect(languageSelect) {
-    Speakit.getVoices().then((voices)=> {
+    Speakit.getVoices()
+    // Enable the following line of code if you just want to list only the natural voices
+    // .then((voices)=> voices.filter((voices)=> voices.name.includes("(Natural)")) )
+    .then((voices)=> {
         if (voices.length > 0) {
             languageSelect.innerHTML = returnHTMLdefaultOption()
-          voices.forEach((voice)=> languageSelect.innerHTML += returnHTMLVoiceOption(voice) )
+            voices.forEach((voice)=> languageSelect.innerHTML += returnHTMLVoiceOption(voice) )
         }
     })
     .catch((error)=> console.error('Error loading the available voices:', error) )
 }
-
 
 function mainFunction() {
     languageSelect.innerHTML = returnHTMLdefaultOption()
