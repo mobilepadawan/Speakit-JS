@@ -8,7 +8,7 @@ Speakit JS is a JavaScript library to an easiest implement of [Speech Synthesis 
 This library enables you to audibly reproduce any text from a web application in various languages. It utilizes the `SpeechSynthesis` API along with the `SpeechSynthesisUtterance` API to regulate the audio speed, pitch, and voice selection (male or female) across different languages (*) and accents.
 
 ```
-🔔 We are exiting of early beta phase and entereing in a Release Candidate version. Stay tuned!
+🔔 We have launched the first final version of Speakit-JS. Enjoy it!
 ```
 
 
@@ -27,14 +27,14 @@ For a **not-so-technical hands-on**, please visit the [Official website](https:/
 4) [Compatibility](#compatibility)
     * [Dekstop web browsers](#desktop-web-browsers)
     * [Mobile web browsers](#mobile-web-browsers)
-5) How to contribute with its evolution
-6) License
-7) Contacting me
+5) [How to contribute](#how-to-contribute)
+6) [License](#license)
+7) [Contacting me](#contacting-me)
 
 <br>
 <hr>
 
-### Installing Speakit JS
+## Installing Speakit JS
 
 You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s).
 
@@ -52,14 +52,14 @@ an ES6 Module * version of this library.
 <br>
 <hr>
 
-### How to use it
+## How to use it
 
 After referencing the Library into the HTML file of your project, you can configure some properties to a better audio performance.
 * **utteranceRate**
 * **utterancePitch**
 * **getVoices()**
 
-#### utteranceRate property
+### utteranceRate property
 
 The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents **normal speed**, while higher values will increase the speed and lower values will decrease it.
 
@@ -79,7 +79,7 @@ a value unless you find the voice speaking too quickly or sounding distorted.
 <br>
 <hr>
 
-#### utterancePitch property
+### utterancePitch property
 
 The `utterancePitch` property defines the pitch of the voice used for speech synthesis. This property adjusts the fundamental frequency of the synthesized voice, which can affect the perceived pitch of the voice.
 
@@ -97,7 +97,7 @@ value unless you find the voice speaking too quickly or sounding distorted.
 <br>
 <hr>
 
-#### getVoices() method
+### getVoices() method
 
 The `getVoices()` method is a static method of the `Speakit` class used to retrieve a list of available voices for speech synthesis in the web browser.
 
@@ -124,7 +124,7 @@ This method returns an array of SpeechSynthesisVoice objects representing the vo
 
 I recommend testing the code sample below in `DevTools > Console` to view the complete list of voices available in the web browser you are using to code and test your web app. Please note that this list of voices may vary across different web browser engines.
 
-#### Some ISO languages
+### Some ISO languages
 
 |ISO Code|Description|
 |-|-|
@@ -146,7 +146,7 @@ web browser and the operating system where the web app is running.
 <br>
 <hr>
 
-### Some samples
+## Some samples
 
 #### How to get the list of available voices
 
@@ -179,7 +179,7 @@ function loadVoicesInSelect(languageSelect) {
 
 The `getVoices()` method is asynchronous and utilizes JS Promises. Ensure effective error handling using the `.then()` and `.catch()` methods.
 
-#### Reproducing Audible Text
+### Reproducing Audible Text
 
 The `.readText()` method requires the first two parameters. **The first parameter** is the text to be reproduced. It can be a static text as shown in the sample below or, alternatively, text provided by a `textInput`, `textArea`, or another HTML element. Ensure that the text is clean and does not contain HTML tags or similar, as different voices may exhibit unpredictable behavior.
 
@@ -208,11 +208,11 @@ The `.readText()` method operates using JavaScript Promises. You can chain a `.t
 <br>
 <hr>
 
-### Compatibility
+## Compatibility
 
 SpeechSynthesis API boasts good compatibility with most of web browsers, as it was introduced in 2014. Below, you can find a list of web browsers that support this JS API.
 
-#### Desktop Web browsers
+### Desktop Web browsers
 
 |Brand|Version|SpeechSynthesis available|
 |-|-|-|
@@ -224,11 +224,11 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |Samsung Internet|49+|✅|
 |Internet Explorer|?|⛔️|
 
-### Note about Safari and Firefox browsers
+## Note about Safari and Firefox browsers
 
 **🔔 We detected in Safari and Firefox browsers that the `utteranceRate` and `utterancePitch` properties of the SpeakitJS library must used with a lower value than the default value. Those web browsers play the voice in an accelerated way than the experience got with Chrome and Edge. Please, test it well and make a fine tuning of that properties.**
 
-#### Mobile Web browsers
+### Mobile Web browsers
 
 |Brand|Version|SpeechSynthesis available|
 |-|-|-|
@@ -246,3 +246,14 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |iOS WKWebView|?|⛔️|
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
+
+## How to contribute
+
+We haven't a solid program about how to contribute with SpeakitJS library but we can invite you to send your comments and suggestions opening an issue space in this Repository. We evaluate them and plan how to implement if you comments will be helpful for the maintaning process of this library.
+
+## License
+
+We have not a solid model of license. For the moment we invite you to use Speakit-JS library for free. 
+
+## Contacting me
+You can write me through Github space or send me an email to `ferproonline_gmail_com`. Also you can follow me on (X) or Twitter in my personal account: `@mobilepadawan`.
