@@ -226,12 +226,7 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 ### Note about Safari and Firefox browsers
 
-```
-🔔 We detected in Safari and Firefox browsers that the `utteranceRate` and `utterancePitch` properties
-of the SpeakitJS library must used with a lower value than the default value. Those web browsers play
-the voice in an accelerated way than the experience got with Chrome and Edge.
-Please, test it well and make a fine tuning of that properties.
-```
+🔔 **We detected in Safari and Firefox browsers that the `utteranceRate` and `utterancePitch` properties of the SpeakitJS library must used with a lower value than the default value. Those web browsers play the voice in an accelerated way than the experience got with Chrome and Edge. Please, test it well and make a fine tuning of that properties.**
 
 #### Mobile Web browsers
 
