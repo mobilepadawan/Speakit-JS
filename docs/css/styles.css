@@ -32,8 +32,9 @@ table {
     border-radius: 6px;
     box-shadow: 2px 8px 10px rgb(70, 70, 70);
     margin-bottom: 20px;
+
     & input, select {
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -52,6 +53,7 @@ details {
     border: 1px solid grey;
     border-radius: 10px;
     padding: 16px;
+    cursor: pointer;
 }
 
 .emoji-image {

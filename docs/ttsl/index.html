@@ -11,7 +11,7 @@
     <meta name="author" content="Fernando Omar Luna - alias @mobilepadawan">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/Speakit-beta.v1.0.0.min.js"></script>
+    <script src="js/Speakit1.0.0.min.js"></script>
     <script defer src="js/speech-synthesis.js"></script>
 </head>
 <body>
@@ -23,6 +23,19 @@
     </header>
     <main>
         <section>
+            <label for="input-filter">
+                <input type="search" id="input-filter" placeholder="Write a filter like 'es' or 'it' and press Enter" autocomplete="off">
+            </label>
+            <label for="language-select">
+                <select id="language-select">
+                </select>
+            </label>
+            <label for="text-input">
+                <textarea placeholder="Add or paste a text or sentence." id="text-input" class="text-area text-blue bg-lightgray"></textarea>
+            </label>
+            <button id="read-button" title="Speak the text added in the textarea.">Read &#10146;</button>
+            <button id="pause-button" title="Pause or Resume the current speaking">Pause &#9208;</button>
+            <button id="cancel-button" title="Cancel the speaking of the text">Stop &#9209;</button>
             <details>
                 <summary>🔔 Quick helping guide:</summary>
                 <p>Its functionality is very simple. Just write or paste text into the text area and press <code>Enter</code>, choose a language from the dropdown menu, and click the 'Read' Button to playback.</p>
@@ -36,19 +49,6 @@
                 </ul>
                 <p>Delete the filtering text from the X option in the search field to restore the complete list of ISO languages CODE.</p>
             </details>
-            <label for="input-filter">
-                <input type="search" id="input-filter" placeholder="Write a filter like 'es' or 'it' and press Enter">
-            </label>
-            <label for="language-select">
-                <select id="language-select">
-                </select>
-            </label>
-            <label for="text-input">
-                <textarea placeholder="Add or paste a text or sentence." id="text-input" class="text-area text-blue bg-lightgray"></textarea>
-            </label>
-            <button id="read-button" title="Speak the text added in the textarea.">Read &#10146;</button>
-            <button id="pause-button" title="Pause or Resume the current speaking">Pause &#9208;</button>
-            <button id="cancel-button" title="Cancel the speaking of the text">Stop &#9209;</button>
         </section>
     </main>
 </body>
