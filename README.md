@@ -11,8 +11,6 @@ This library enables you to audibly reproduce any text from a web application in
 🔔 We are exiting of early beta phase and entereing in a Release Candidate version. Stay tuned!
 ```
 
-🔔 ~~This product is in early beta phase. Please write me to report any bug you did found it.~~
-
 
 For a **not-so-technical hands-on**, please visit the [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick guide and a Demo to test the Speakit-JS functionality.
 
@@ -225,6 +223,12 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |Opera|21+|✅|
 |Samsung Internet|49+|✅|
 |Internet Explorer|?|⛔️|
+
+### Note about Safari and Firefox browsers
+
+```
+🔔 We detected in Safari and Firefox browsers that the `utteranceRate` and `utterancePitch` properties of the SpeakitJS library must used with a lower value than the default value. Those web browsers play the voice in an accelerated way than the experience got with Chrome and Edge. Please, test it well and make a fine tuning of that properties.
+```
 
 #### Mobile Web browsers
 
