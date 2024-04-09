@@ -67,12 +67,12 @@ The `utteranceRate` property defines the playback rate of spoken text using the 
   Speakit.utteranceRate = 1.03
 ```
 
-We recommend using a specific precision, for example, `1.05` or `1.15`. This property is very sensitive, so you should conduct several tests based on the selected language.
+We recommend using a specific precision, for example, `1.02` or `1.14`. This property is very sensitive, so you should conduct several tests based on the selected language.
 
 Some languages work well with the value `1.0` while others may require a slightly higher value.
 
 ```
-🔔 The default value is set in 1.05. It is not mandatory to configure
+🔔 The default value is set in 1.03. It is not mandatory to configure
 a value unless you find the voice speaking too quickly or sounding distorted.
 ```
 
@@ -226,7 +226,7 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 ### Note about Safari and Firefox browsers
 
-🔔 **We detected in Safari and Firefox browsers that the `utteranceRate` and `utterancePitch` properties of the SpeakitJS library must used with a lower value than the default value. Those web browsers play the voice in an accelerated way than the experience got with Chrome and Edge. Please, test it well and make a fine tuning of that properties.**
+**🔔 We detected in Safari and Firefox browsers that the `utteranceRate` and `utterancePitch` properties of the SpeakitJS library must used with a lower value than the default value. Those web browsers play the voice in an accelerated way than the experience got with Chrome and Edge. Please, test it well and make a fine tuning of that properties.**
 
 #### Mobile Web browsers
 
