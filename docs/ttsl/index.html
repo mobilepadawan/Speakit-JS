@@ -36,7 +36,8 @@
             <button id="read-button" title="Speak the text added in the textarea.">Read &#10146;</button>
             <button id="pause-button" title="Pause or Resume the current speaking">Pause &#9208;</button>
             <button id="cancel-button" title="Cancel the speaking of the text">Stop &#9209;</button>
-            <details>
+            <button id="help-button" title="Click to get help for using ">🔔</button>
+            <!-- <details>
                 <summary>🔔 Quick helping guide:</summary>
                 <p>Its functionality is very simple. Just write or paste text into the text area and press <code>Enter</code>, choose a language from the dropdown menu, and click the 'Read' Button to playback.</p>
                 <p>If you want to filter the extensive language list, simply type the ISO CODE of your favourite language in the input search field. The WebApp will then filter the available languages according to what you've typed.</p>
@@ -48,7 +49,23 @@
                     <li><strong>it:</strong> Italian</li>
                 </ul>
                 <p>Delete the filtering text from the X option in the search field to restore the complete list of ISO languages CODE.</p>
-            </details>
+            </details> -->
+            <dialog>
+                <div id="dialogHeader">
+                    <h2>🔔 Quick helping guide:</h2>
+                    <p id="dialogbuttonClose">X</p>
+                </div>
+                <p>Just write or paste text into the text area and press <code>Enter</code>, choose a language from the dropdown menu, and click the 'Read' Button to playback.</p>
+                <p>If you want to filter the extensive language list, simply type the ISO CODE of your favourite language in the input search field. The WebApp will then filter the available languages according to what you've typed.</p>
+                <p>Here you have some sample of ISO languages CODE:</p>
+                <ul>
+                    <li><strong>pt:</strong> Portuguese</li>
+                    <li><strong>en:</strong> English</li>
+                    <li><strong>es:</strong> Español</li>
+                    <li><strong>it:</strong> Italian</li>
+                </ul>
+                <p>Delete the filtering text from the X option in the search field to restore the complete list of ISO languages CODE.</p>
+            </dialog>
         </section>
     </main>
 </body>
