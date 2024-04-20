@@ -1,5 +1,5 @@
 # Speakit JS
-Speakit JS is a JavaScript library to an easiest implement of [Speech Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis).
+Elevate your web applications with the power of JavaScript speech synthesis. Make your users listen to your content with just two lines of code!.
 
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-red?style=for-the-badge&logo=javascript)
 
