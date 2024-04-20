@@ -272,7 +272,7 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 ## How to contribute
 
-We haven't a solid program about how to contribute with SpeakitJS library but we can invite you to send your comments and suggestions opening an issue space in this Repository. We evaluate them and plan how to implement if you comments will be helpful for the maintaning process of this library.
+We invite you to send your comments and suggestions opening an issue space in this Repository. We will evaluate them and plan how to implement if you comments are helpful for the maintaning process of this library.
 
 ## License
 
