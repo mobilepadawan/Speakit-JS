@@ -89,11 +89,6 @@ The `utterancePitch` property defines the pitch of the voice used for speech syn
 
 A value of `1.0` represents normal pitch, while higher or lower values will alter the tone of the voice. Configure this property value with patience, as it is very sensitive.
 
-```
-🔔 The default value is set in 1.05. It is not mandatory to configure a
-value unless you find the voice speaking too quickly or sounding distorted.
-```
-
 <br>
 <hr>
 
