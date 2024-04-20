@@ -7,10 +7,6 @@ Speakit JS is a JavaScript library to an easiest implement of [Speech Synthesis 
 
 This library enables you to audibly reproduce any text from a web application in various languages. It utilizes the `SpeechSynthesis` API along with the `SpeechSynthesisUtterance` API to regulate the audio speed, pitch, and voice selection (male or female) across different languages (*) and accents.
 
-```
-🔔 We have launched the first final version of Speakit-JS. Enjoy it!
-```
-
 For a **not-so-technical hands-on**, please visit the [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick guide and a Demo to test the Speakit-JS functionality.
 
 ## SUMMARY
@@ -22,6 +18,11 @@ For a **not-so-technical hands-on**, please visit the [Official website](https:/
     * [getVoices() method](#getvoices-method)
     * [About the ISO languages](#about-the-iso-languages)
 3) [Some samples](#some-samples)
+    * [Get the list of available voices](#get-the-list-of-available-voices)
+    * [Reproducing Audible Text](#reproducing-audible-text)
+    * [Pause a speaking action](#pause-a-speaking-action)
+    * [Resume a paused speaking](#resume-a-paused-speaking)
+    * [Stop speaking](#stop-speaking)
 4) [Compatibility](#compatibility)
     * [Dekstop web browsers](#desktop-web-browsers)
     * [Mobile web browsers](#mobile-web-browsers)
@@ -222,7 +223,7 @@ If you need to cancel the any speaking process you can stop it by using the `.st
 Speakit.stopSpeaking();
 ```
 
-This method will cancel the speaking process and will send a warning to the DevTools JS console by the JS **console** Object. This is not an error or an issue, it is just a warning about the user (or webapp) executed a cancellation action.
+This method will cancel the speaking process and will send a warning to the DevTools JS console by the JS **console** Object. This is not an error or an issue, it is just a warning about the user _(or webapp)_ executed a cancellation action.
 
 <br>
 <hr>
