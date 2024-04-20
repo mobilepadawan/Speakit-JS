@@ -198,13 +198,15 @@ Speakit.readText("This is a text to an audibly reproduce through the JavaScript 
 
 The `.readText()` method operates using JavaScript Promises. You can chain a `.then()` method to execute a JavaScript code after the text has been audibly reproduce.
 
-### Pause the voice that is speaking
+### Pause a speaking action
 
 You can **pause** any current speaking process by using the `.pauseSpeaking` method.
 
 ```javascript
 Speakit.pauseSpeaking();
 ```
+
+This action will pause the current speaking process. It is not cancelled but paused waiting for to continue when the `.resumeSpeaking()` will be executed.
 
 ### Resume a paused speaking
 
@@ -214,6 +216,7 @@ You can **resume** (continue) reproducing a text in an audible format if you pre
 Speakit.resumeSpeaking();
 ```
 
+This action will continue reproducing the rest of the text since the position where it was paused.
 
 ### Stop speaking
 
@@ -223,7 +226,7 @@ If you need to cancel the any speaking process you can stop it by using the `.st
 Speakit.stopSpeaking();
 ```
 
-This method will cancel the speaking process and will send a warning to the DevTools JS console by the JS **console** Object. This is not an error or an issue, it is just a warning about the user _(or webapp)_ executed a cancellation action.
+This action will cancel the speaking process and will send a warning to the DevTools JS console by the JS **console** Object. This is not an error or an issue, it is just a warning about the user _(or webapp)_ executed a cancellation action.
 
 <br>
 <hr>
