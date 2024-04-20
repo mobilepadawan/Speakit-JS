@@ -11,18 +11,16 @@ This library enables you to audibly reproduce any text from a web application in
 🔔 We have launched the first final version of Speakit-JS. Enjoy it!
 ```
 
-
 For a **not-so-technical hands-on**, please visit the [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick guide and a Demo to test the Speakit-JS functionality.
 
 ## SUMMARY
-⏳ WORK IN PROGRESS...
 
 1) [Installing Speakit JS](#installing-speakit-js)
 2) [How to use it](#how-to-use-it)
     * [utteranceRate property](#utterancerate-property)
     * [utterancePitch property](#utterancepitch-property)
     * [getVoices() method](#getvoices-method)
-    * [Some ISO languages](#some-iso-languages)
+    * [About the ISO languages](#about-the-iso-languages)
 3) [Some samples](#some-samples)
 4) [Compatibility](#compatibility)
     * [Dekstop web browsers](#desktop-web-browsers)
@@ -124,7 +122,9 @@ This method returns an array of SpeechSynthesisVoice objects representing the vo
 
 I recommend testing the code sample below in `DevTools > Console` to view the complete list of voices available in the web browser you are using to code and test your web app. Please note that this list of voices may vary across different web browser engines.
 
-### Some ISO languages
+### About the ISO languages
+
+You can use it to populate a list of voices in an HTML `Combo Select` element, an `HTML table` element, or another type of web component, allowing users to choose their preferred voice and tone. Alternatively, for closed applications, you can automatically set a voice based on the locale region configuration declared in the user's web browser.
 
 |ISO Code|Description|
 |-|-|
@@ -135,8 +135,6 @@ I recommend testing the code sample below in `DevTools > Console` to view the co
 |en-BR|English - Great Britain|
 |en-AU|English - Australia|
 |en-HK|English - Hong Kong|
-
-You can use it to populate a list of voices in an HTML `Combo Select` element, an `HTML table` element, or another type of web component, allowing users to choose their preferred voice and tone. Alternatively, for closed applications, you can automatically set a voice based on the locale region configuration declared in the user's web browser.
 
 ```
 🔔 Please note that voice availability may vary depending on the user's
@@ -198,6 +196,18 @@ Speakit.readText("This is a text to an audibly reproduce through the JavaScript 
 ```
 
 The `.readText()` method operates using JavaScript Promises. You can chain a `.then()` method to execute a JavaScript code after the text has been audibly reproduce.
+
+### Pause the voice that is speaking
+
+You can **pause** any current speaking process by using the method `.pauseSpeaking()`.
+
+### Resume a paused speaking
+
+You can **resume** (continue) reproducing a text in an audible format if you previously paused it by using the method `.resumeSpeaking()`.
+
+### Stop speaking
+
+If you need to cancel the any speaking process you can stop it by using the method `.stopSpeaking()`. This method will cancel the speaking process and will send a warning to the DevTools JS console by the JS **console** Object. This is not an error or an issue, it is just a warning about the user (or webapp) executed a cancellation action.
 
 
 ```
