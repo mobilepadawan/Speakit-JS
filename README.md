@@ -17,6 +17,7 @@ For a **not-so-technical hands-on**, please visit the [Official website](https:/
     * [utterancePitch property](#utterancepitch-property)
     * [getVoices() method](#getvoices-method)
     * [About the ISO languages](#about-the-iso-languages)
+    * [Checking your web browser compatibility](checking-your-web-browser-compatibility)
 3) [Some samples](#some-samples)
     * [Get the list of available voices](#get-the-list-of-available-voices)
     * [Reproducing Audible Text](#reproducing-audible-text)
@@ -141,8 +142,15 @@ You can use it to populate a list of voices in an HTML `Combo Select` element, a
 🔔 Please note that voice availability may vary depending on the user's
 web browser and the operating system where the web app is running.
 ```
-
 <br>
+
+### Checking your web browser compatibility
+If you want to check the web browser compatibility you can execute the `.TTStest()` method. It will **return** if the web browser it is compatible or not with **Speech Synthesis**.
+
+```javascript
+  Speakit.TTStest();
+```
+
 <hr>
 
 ## Some samples
