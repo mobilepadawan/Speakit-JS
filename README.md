@@ -17,7 +17,7 @@ For a **not-so-technical hands-on**, please visit the [Official website](https:/
     * [utterancePitch property](#utterancepitch-property)
     * [getVoices() method](#getvoices-method)
     * [About the ISO languages](#about-the-iso-languages)
-    * [Checking your web browser compatibility](checking-your-web-browser-compatibility)
+    * [Checking your web browser compatibility](#checking-your-web-browser-compatibility)
 3) [Some samples](#some-samples)
     * [Get the list of available voices](#get-the-list-of-available-voices)
     * [Reproducing Audible Text](#reproducing-audible-text)
