@@ -36,13 +36,7 @@ For a **not-so-technical hands-on**, please visit the [Official website](https:/
 
 ## Installing Speakit JS
 
-You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s). As well, any frontend project created by using NodeJS and NPM can let you add this marvelous library, just installing it through NPM command. 
-
-```terminal
-   npm install speakit-js
-```
-Please, visit [NPMJS](https://www.npmjs.com/package/speakit-js)) to know more.
-
+You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s).
 
 ```HTML
 <script src="js/Speakit-beta.v1.0.0.js"></script>
@@ -54,6 +48,16 @@ You don't need to use the `defer` attribute for the script tag, and there's no n
 🔔 In the comming weeks you'll have
 an ES6 Module * version of this library.
 ```
+
+## Installing Speakit JS as an NPM package
+
+ As well, any frontend project created by using NodeJS and NPM can let you add this marvelous library, just installing it through NPM command. 
+
+```terminal
+   npm install speakit-js
+```
+Please, visit [NPMJS](https://www.npmjs.com/package/speakit-js)) to know more.
+
 
 <br>
 <hr>
