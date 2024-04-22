@@ -292,4 +292,8 @@ We invite you to send your comments and suggestions opening an issue space in th
 We have not a solid model of license. For the moment we invite you to use Speakit-JS library for free. 
 
 ## Contacting me
+
 You can write me through Github space or send me an email to `ferproonline_gmail_com`. Also you can follow me on (X) or Twitter in my personal account: `@mobilepadawan`.
+
+## Keywords
+`speakit-js`, `speech-synthesis`, `voice`, `javascript`, `text-to-speech`, `tts`, `speech`, `synthesis`, `utterance`, `library`
