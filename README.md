@@ -288,6 +288,9 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 In this section you can find news about what we are working on the coming versions of Speakit-JS.
 
+[] Specify an ISO Code language to filter the `.getVoices()` method results.
+[] Adding the filter behaivour to the `.getVoices()` method
+[] Adding the fallback behaivour to the `.getVoices()` method
 
 
 ## How to contribute
