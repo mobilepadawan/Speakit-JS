@@ -27,9 +27,10 @@ For a **not-so-technical hands-on**, please visit the [Official website](https:/
 4) [Compatibility](#compatibility)
     * [Dekstop web browsers](#desktop-web-browsers)
     * [Mobile web browsers](#mobile-web-browsers)
-5) [How to contribute](#how-to-contribute)
-6) [License](#license)
-7) [Contacting me](#contacting-me)
+5) Alpha version (News)
+6) [How to contribute](#how-to-contribute)
+7) [License](#license)
+8) [Contacting me](#contacting-me)
 
 <br>
 <hr>
