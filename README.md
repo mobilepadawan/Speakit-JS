@@ -286,6 +286,10 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 ## Alpha version
 
+In this section you can find news about what we are working on the coming versions of Speakit-JS.
+
+
+
 ## How to contribute
 
 We invite you to send your comments and suggestions opening an issue space in this Repository. We will evaluate them and plan how to implement if you comments are helpful for the maintaning process of this library.
