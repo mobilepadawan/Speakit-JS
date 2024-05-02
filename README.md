@@ -284,6 +284,8 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
 
+## Alpha version
+
 ## How to contribute
 
 We invite you to send your comments and suggestions opening an issue space in this Repository. We will evaluate them and plan how to implement if you comments are helpful for the maintaning process of this library.
