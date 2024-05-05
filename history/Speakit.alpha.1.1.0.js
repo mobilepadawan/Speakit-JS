@@ -1,8 +1,8 @@
 class Speakit extends SpeechSynthesis {
-    static utteranceRate = 1.02
+    static utteranceRate = 1.01
     static utterancePitch = 1.0
     static totalAvailableVoices = 0
-    static languageFilter = "es-MX"    // U can specify here an ISO language to filter the voices
+    static languageFilter = ""    // U can specify here an ISO language to filter the voices
     static totalVoices = []
 
     static #getAvailableVoices() {
@@ -53,7 +53,7 @@ class Speakit extends SpeechSynthesis {
             utterance.pitch = Speakit.utterancePitch || 1.0
             if (nameOfVoice) {
                 let voice = speechSynthesis.getVoices().find(v => v.name === nameOfVoice)
-                voice ? utterance.voice = voice : console.error(`The selected voice '${nameOfVoice}' is not avialable.`)
+                voice ? utterance.voice = voice : console.error(`The selected voice '${nameOfVoice}' is not available.`)
             }
             utterance.onend = () => resolve()
             utterance.onerror = (error) => reject(error)
