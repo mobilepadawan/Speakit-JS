@@ -295,22 +295,22 @@ In this section you can find news about what we are working on the coming versio
 * [x] Tested in the main web browser engines.
 
 ### Way to use it
-🔔 If you are thinking to try the Alpha version, please consider to **not implement it in Production environments**. 
+🔔 If you are thinking to try the Alpha version, please consider do **not implement it in Production environments**. 
 
-In this version you can filter a specific type of voice `en`, `es`, `it`, etcetera, by using the `languageFilter` property.
+In this version you can filter a specific type of voice `en`, `es`, `it`, etcetera, by defining the desired ISO language code in the `languageFilter` property.
 
 ```javascript
 Speakit.languageFilter = "it-IT"
 ```
 
-After apply this filter, when you call the `.getVoices()` method you will get just the available voices for this `ISO Language`.
+After apply this filter, when you call the `.getVoices()` method you will get just the available voices for the selected `ISO Language`.
 
 ```javascript
 Speakit.getVoices()
 .then(()=> console.table(Speakit.totalVoices))
 ```
 
-Also the `totalAvailableVoices` property will return the proper number of voices, according to the filtered ISO language selected.
+Also the `totalAvailableVoices` property will return the proper number of voices, according to the filtered ISO language.
 
 ### About the tests
 **All the tests** over the main web browser engines throws good results except with **Apple Safari** desktop version. The Apple's web browser has a very limited support for its internal voices and the filtering method can't get a proper behaivour when it is implemented. We need some more tests to find the best solution and to achive the better experience with the available voices in this  particular web browser.
