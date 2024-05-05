@@ -2,7 +2,7 @@ class Speakit extends SpeechSynthesis {
     static utteranceRate = 1.02
     static utterancePitch = 1.0
     static totalAvailableVoices = 0
-    static languageFilter = ""    // you can specify here an ISO language to filter the voices
+    static languageFilter = "es-MX"    // U can specify here an ISO language to filter the voices
     static totalVoices = []
 
     static #getAvailableVoices() {
@@ -11,13 +11,11 @@ class Speakit extends SpeechSynthesis {
                 let voices = speechSynthesis.getVoices()
                 if (voices.length > 0) {
                     voices.sort((a, b) => a.lang.localeCompare(b.lang))
-                    Speakit.totalAvailableVoices = voices.length
                     resolve(voices)
                 } else {
                     speechSynthesis.onvoiceschanged = () => {
                         voices = speechSynthesis.getVoices()
                         voices.sort((a, b) => a.lang.localeCompare(b.lang))
-                        Speakit.totalAvailableVoices = voices.length
                         resolve(voices)
                     }
                 }
@@ -36,10 +34,12 @@ class Speakit extends SpeechSynthesis {
               if (filteredLanguages.length > 0) {
                 Speakit.totalVoices.length = 0
                 Speakit.totalVoices = filteredLanguages
+                Speakit.totalAvailableVoices = filteredLanguages.length
               } else {
                 console.warn("Error with the ISO language specified:", Speakit.languageFilter.trim())
               }
             }
+            Speakit.totalAvailableVoices = Speakit.totalVoices.length
             // END OF ADDED CODE (WE ARE IN ALPHA STAGE. DO NOT USE THIS LIBRARY VERSION.)
         }
         return Speakit.totalVoices
@@ -89,7 +89,8 @@ class Speakit extends SpeechSynthesis {
 
     static TTStest() {
         if (speechSynthesis) {
-            return "🟢 Your web browser has supporting for Text-To-Speech."
+            this.readText("Your web browser has supported for using Text-To-Speech.", "en-GB")
+            return "🟢 Your web browser has supported for using Text-To-Speech."
         } else {
             return "🔴 Your web browser does not supports Text-To-Speech. Consider to use a Webkit or Blink (Chromium) based web browser."
         }
