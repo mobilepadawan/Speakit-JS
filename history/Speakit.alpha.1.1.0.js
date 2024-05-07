@@ -30,7 +30,10 @@ class Speakit extends SpeechSynthesis {
             Speakit.totalVoices = await this.#getAvailableVoices()
             // ADDED THE FOLLOWING LINES TO APPLY THE NEW PROPERTY FOR VOICES FILTERING PURPOSES
             if (Speakit.totalVoices.length > 0 && Speakit.languageFilter.trim() !== "") {
-              let filteredLanguages = Speakit.totalVoices.filter((voice)=> voice.lang === Speakit.languageFilter.trim() )
+              // let filteredLanguages = Speakit.totalVoices.filter((voice)=> voice.lang === Speakit.languageFilter.trim() )
+              // I propose to change the way to filter ISO languages by granting filtering with just a part of the ISO language.
+              // We will get more flexibility and a wide languages list to pick for.
+              let filteredLanguages = Speakit.totalVoices.filter((voice)=> voice.lang.includes(Speakit.languageFilter.trim()) )
               if (filteredLanguages.length > 0) {
                 Speakit.totalVoices.length = 0
                 Speakit.totalVoices = filteredLanguages
