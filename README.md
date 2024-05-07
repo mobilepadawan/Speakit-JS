@@ -312,8 +312,24 @@ Speakit.getVoices()
 
 Also the `totalAvailableVoices` property will return the proper number of voices, according to the filtered ISO language.
 
+### Another proposal for filtering
+
+According to some tests, we propose to change a part of the `.languageFilter` property to get more ways to apply a language filter.
+
+The new way we are testing gives you more flexibility to filter languages using just a part of the ISO language code. Here is a sample:
+```javascript
+Speakit.languageFilter = "es-"
+```
+This sample code will bring you a list of spanish languages available including all the different accents: `Bolivian`, `Peruvian`, `Argentinian`, `Chilean`, etc. 
+
+```javascript
+Speakit.languageFilter = "-CA"
+```
+This other sample code will bring you a list of all canadian languages available including the different languages using in this country: `en` and `fr`.
+
+
 ### About the tests
-**All the tests** over the main web browser engines throws good results except with **Apple Safari** desktop version. The Apple's web browser has a very limited support for its internal voices and the filtering method can't get a proper behaivour when it is implemented. We need some more tests to find the best solution and to achive the better experience with the available voices in this  particular web browser.
+**All the tests** over the main web browser engines throws good results except with **Apple Safari** desktop version. The Apple's web browser has a very limited support for its internal voices and the filtering method can't get a proper behaivour when it is implemented. We need to run more tests to find the best solution and to achive the better experience with the available voices in this  particular web browser.
 
 We still did not tests over **Safari Mobile**. If you can do it, please send us your feedback about the experience on it.
 
