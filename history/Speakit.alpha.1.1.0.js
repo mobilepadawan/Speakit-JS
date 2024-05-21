@@ -99,9 +99,7 @@ class Speakit extends SpeechSynthesis {
 
     static about() {
         return `Copyright 2024-02-08: Fernando Omar Luna - @ mobile padawan.
-
         Send me an email to (ferproonline at gmail dot com) or DMme by Twitter/X (@ mobile padawan) just to tell me what kind of use you are giving to this class and/or just to 'say Hi!'.
-
         This library is free of use and modify, but, please, don't remove this method.`
     }
 }
