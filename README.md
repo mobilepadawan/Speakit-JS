@@ -145,9 +145,9 @@ You can use it to populate a list of voices in an HTML `Combo Select` element, a
 |en-HK|English - Hong Kong|
 
 ```
-🔔 Please note that voice availability may vary depending on 
-the user's web browser and the operating system where the 
-web app is running.
+🔔 Please note that voice availability may vary depending
+on the user's web browser and the operating system where
+the web app is running.
 ```
 <br>
 
@@ -174,6 +174,7 @@ Add a Select HTML element to configure it to display a list of voices:
 Next, create a DOM link with the `Select` HTML element.
 
 Then, create a function to retrieve all available voices, iterate through them, and populate the voice list in the Select HTML element with the voice list:
+
 ```javascript
 const languageSelect = document.getElementById('language-select')
 
@@ -204,10 +205,10 @@ The `.readText()` method requires the first two parameters. **The first paramete
 You can provide this information as the third parameter, and `Speakit JS` will attempt to retrieve the `SpeechSynthesisUtterance` to audibly reproduce the accent according to your selection. If you do not provide this third parameter, `Speakit JS` will use the default voice language to reproduce the text. 
 
 ```javascript
-Speakit.readText("This is a text to an audibly reproduce through the JavaScript SpeechSynthesis.", 
+Speakit.readText("This is a text for reproducing it using JS SpeechSynthesis.", 
                  "en-NZ", 
                  voiceName)
-.then(()=> console.log('Text succesfuly readed.') ) //do something after the Speech synthesis finished.
+.then(()=> console.log('Text successfully readed.') ) //do something
 .catch((error)=> console.error('Error reading the text:', error) )
 ```
 
