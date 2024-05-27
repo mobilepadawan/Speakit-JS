@@ -83,8 +83,9 @@ We recommend using a specific precision, for example, `1.02` or `1.14`. This pro
 Some languages work well with the value `1.0` while others may require a slightly higher value.
 
 ```
-🔔 The default value is set in 1.03. It is not mandatory to configure
-a value unless you find the voice speaking too quickly or sounding distorted.
+🔔 The default value is set in 1.03. It is not mandatory
+to configure a value unless you find the voice speaking
+too quickly or sounding distorted.
 ```
 
 <br>
@@ -114,7 +115,7 @@ The `getVoices()` method is a static method of the `Speakit` class used to retri
 This method returns an array of SpeechSynthesisVoice objects representing the voices available for use with the speech synthesizer.
 
 ```javascript
-  voice.lang // represents the property where you can watch the ISO code of any available language
+  voice.lang // property for set the ISO code of a language.
   /*
     'es-MX' Español - México
     'en-AU' English - Australian
@@ -165,6 +166,7 @@ If you want to check the web browser compatibility you can execute the `.TTStest
 #### How to get the list of available voices
 
 Add a Select HTML element to configure it to display a list of voices:
+
 ```html
 <select id="language-select">
   <option value="">Pick a language</option>
