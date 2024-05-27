@@ -57,7 +57,7 @@ an ES6 Module * version of this library.
 ```terminal
    npm install speakit-js
 ```
-Please, visit [NPMJS](https://www.npmjs.com/package/speakit-js)) to know more.
+Please, visit [NPMJS](https://www.npmjs.com/package/speakit-js) to know more.
 
 
 <br>
