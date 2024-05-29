@@ -7,7 +7,7 @@ Elevate your web applications with the power of JavaScript speech synthesis. Mak
 
 This library enables you to audibly reproduce any text from a web application in various languages. It utilizes the `SpeechSynthesis` API along with the `SpeechSynthesisUtterance` API to regulate the audio speed, pitch, and voice selection (male or female) across different languages (*) and accents.
 
-Visit the [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick **not-so-technical** guide and a Demo to test the Speakit-JS library functionality.
+Visit our [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'll find a very quick **not-so-technical** guide and a Demo to test the Speakit-JS library functionality.
 
 ## SUMMARY
 
