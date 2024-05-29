@@ -40,7 +40,7 @@ Visit our [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'l
 You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s).
 
 ```HTML
-<script src="js/Speakit-beta.v1.0.0.js"></script>
+<script src="js/Speakit1.0.1.js"></script>
 ```
 
 You don't need to use the `defer` attribute for the script tag, and there's no need to reference the library at the bottom of an HTML file. The minified version has a weight of only `2KB` ⚖️, making it lightweight. The unminified version, recommended for testing and improvement purposes, has a weight of only `3KB` 🙂.
@@ -75,12 +75,12 @@ After referencing the Library into the HTML file of your project, you can config
 The `utteranceRate` property defines the playback rate of spoken text using the speech synthesizer. This property determines the speed at which the words will be spoken. A value of `1.0` represents **normal speed**, while higher values will increase the speed and lower values will decrease it.
 
 ```javascript
-  Speakit.utteranceRate = 1.03
+  Speakit.utteranceRate = 1.02
 ```
 
 We recommend using a specific precision, for example, `1.02` or `1.14`. This property is very sensitive, so you should conduct several tests based on the selected language.
 
-Some languages work well with the value `1.0` while others may require a slightly higher value.
+Some synthesis languages work well with the value `1.0` while others ones may require a slightly higher value.
 
 ```
 🔔 The default value is set in 1.03. It is not mandatory
