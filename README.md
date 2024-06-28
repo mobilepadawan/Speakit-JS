@@ -285,6 +285,8 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |KaiOS browser|2.5+|⛔️|
 |Android WebView|?|⛔️|
 |iOS WKWebView|?|⛔️|
+|Brave|?|❗️🔬|
+|Opera|?|❗️🔬|
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
 
