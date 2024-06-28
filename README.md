@@ -280,13 +280,13 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |Microsoft Edge|14+|✅|
 |Safari on iOS - iPadOS|7+|✅|
 |Other web browsers on iOS - iPadOS|?|🚧 `Until Apple allows other web engines on iOS and iPadOS, any web browser you install on these mobile devices is required to use the Safari web browser engine.`|
-|Opera mobile-Mini|12+|⛔️|
+|Opera Mini|12+|⛔️|
 |Browser for Android|6+|⛔️|
 |KaiOS browser|2.5+|⛔️|
 |Android WebView|?|⛔️|
 |iOS WKWebView|?|⛔️|
-|Brave|?|❗️🔬|
-|Opera|?|❗️🔬|
+|Brave|?|❗️🔬 not tested yet.|
+|Opera|?|❗️🔬 not tested yet.|
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
 
