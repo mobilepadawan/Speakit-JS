@@ -264,6 +264,7 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |Opera|21+|✅|
 |Samsung Internet|49+|✅|
 |Internet Explorer|?|⛔️|
+|Brave browser|?|❗️🔬 not tested yet. We assume should it works at least the normal voices because this web browser is based in Chromium. Maybe natural voices cannot available.|
 
 ## Note about Safari and Firefox browsers
 
@@ -285,8 +286,8 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 |KaiOS browser|2.5+|⛔️|
 |Android WebView|?|⛔️|
 |iOS WKWebView|?|⛔️|
-|Brave|?|❗️🔬 not tested yet.|
-|Opera|?|❗️🔬 not tested yet.|
+|Brave|?|❗️🔬 not tested yet. We assume should it works at least the normal voices because this web browser is based in Chromium. Maybe natural voices cannot available.|
+|Opera browser|?|❗️🔬 not tested yet.|
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
 
