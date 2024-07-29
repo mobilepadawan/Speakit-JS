@@ -48,6 +48,8 @@ You don't need to use the `defer` attribute for the script tag, and there's no n
 ```
 🔔 In the comming weeks you'll have
 an ES6 Module * version of this library.
+
+We are in process of testing its functions.
 ```
 
 ## Installing Speakit JS as an NPM package
