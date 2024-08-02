@@ -40,8 +40,10 @@ Visit our [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'l
 We have some new improvements over the Alpha version, like to filter the voices through the `languageFilter` property. That new property did passed efectively ✅ all the tests.
 
 ```javascript
-Speakit.languageFilter = "en-AU" // to filter english australian languages
-Speakit.getVoices().then((voices)=> console.table(voices)) // will return only the voices referred in the 'languageFilter' property
+Speakit.languageFilter = "en-AU" // to filter only the 'english australian' language
+Speakit.getVoices().then((voices)=> { // will return only the voices referred in the 'languageFilter' property
+   console.table(voices)
+}) 
 
 ```
 
