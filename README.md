@@ -35,6 +35,16 @@ Visit our [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'l
 <br>
 <hr>
 
+## Alpha version updates (2024-08-02)
+
+We have some new improvements over the Alpha version, like to filter the voices through the `languageFilter` property. That new property did passed efectively ✅ all the tests.
+
+```javascript
+Speakit.languageFilter = "en-AU" // to filter english australian languages
+Speakit.getVoices().then((voices)=> console.table(voices)) // will return only the voices referred in the 'languageFilter' property
+
+```
+
 ## Installing Speakit JS
 
 You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s).
