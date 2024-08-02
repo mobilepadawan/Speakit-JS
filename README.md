@@ -41,7 +41,7 @@ We have some new improvements over the Alpha version, like to filter the voices 
 
 ```javascript
 Speakit.languageFilter = "en-AU" // to filter only the 'english australian' language
-Speakit.getVoices().then((voices)=> { // will return only the voices referred in the 'languageFilter' property
+Speakit.getVoices().then((voices)=> { // will return only the voices related to the 'languageFilter' property
    console.table(voices)
 }) 
 
