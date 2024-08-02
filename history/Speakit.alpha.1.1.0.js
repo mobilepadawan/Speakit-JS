@@ -1,6 +1,6 @@
 class Speakit extends SpeechSynthesis {
-    static utteranceRate = 1.02
-    static utterancePitch = 1.0
+    static utteranceRate = 1.2
+    static utterancePitch = 1.1
     static totalAvailableVoices = 0
     static languageFilter = ""    // U can specify here an ISO language to filter the voices
     static totalVoices = []
@@ -30,8 +30,7 @@ class Speakit extends SpeechSynthesis {
             Speakit.totalVoices = await this.#getAvailableVoices()
             // ADDED THE FOLLOWING LINES TO APPLY THE NEW PROPERTY FOR VOICES FILTERING PURPOSES
             if (Speakit.totalVoices.length > 0 && Speakit.languageFilter.trim() !== "") {
-            //   let filteredLanguages = Speakit.totalVoices.filter((voice)=> voice.lang === Speakit.languageFilter.trim() )
-              let filteredLanguages = Speakit.totalVoices.filter((voice)=> voice.lang.includes(Speakit.languageFilter.trim()) )
+                let filteredLanguages = Speakit.totalVoices.filter((voice)=> voice.lang.includes(Speakit.languageFilter.trim()) )
               if (filteredLanguages.length > 0) {
                 Speakit.totalVoices.length = 0
                 Speakit.totalVoices = filteredLanguages
