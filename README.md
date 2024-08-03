@@ -294,7 +294,9 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
 
-## Alpha version (updates 2024-08-02)
+## Alpha version
+
+(2024-08-02 Updates) 🔔
 
 We finally implemented and tested deeply the following new features over Speakit-JS library.
 
@@ -304,7 +306,8 @@ We finally implemented and tested deeply the following new features over Speakit
 * [x] Tested in the main web browser engines.
 
 ### Way to use it
-🔔 If you are thinking to try the Alpha version, please consider do **not implement it in Production environments**. This version able you to filter a specific type of voice `en`, `es`, `it`, etcetera, by defining the desired ISO language code in the `languageFilter` property.
+🔔 Consider **avoid to implement the Alpha version in Production environments**. 
+This version able you to filter a specific type of voice `en`, `es`, `it`, etcetera, by defining the desired ISO language code in the `languageFilter` property.
 
 ```javascript
 Speakit.languageFilter = "it-IT"
