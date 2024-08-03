@@ -35,18 +35,6 @@ Visit our [Official website](https://mobilepadawan.github.io/Speakit-JS/). You'l
 <br>
 <hr>
 
-## Alpha version updates (2024-08-02)
-
-We have some new improvements over the Alpha version, like to filter the voices through the `languageFilter` property. That new property did passed efectively ✅ all the tests.
-
-```javascript
-Speakit.languageFilter = "en-AU" // to filter only the 'english australian' language
-Speakit.getVoices().then((voices)=> { // will return only the voices related to the 'languageFilter' property
-   console.table(voices)
-}) 
-
-```
-
 ## Installing Speakit JS
 
 You can install `Speakit JS library` by downloading the JS Library from the `/SRC/` folder of this repository and copying it into your web frontend project. To use it, simply reference the file in the `<head>` section of your HTML file(s).
@@ -306,9 +294,9 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 
 🔔 Please visit [Can I Use](https://caniuse.com/mdn-api_speechsynthesis) website for the most recently updates.
 
-## Alpha version
+## Alpha version (updates 2024-08-02)
 
-In this section you can find news about what we are working on the coming versions of Speakit-JS.
+We finally implemented and tested deeply the following new features over Speakit-JS library.
 
 * [x] Specify an ISO Code language to filter the `.getVoices()` method results.
 * [x] Adding the filter behaivour to the `.getVoices()` method.
@@ -316,15 +304,13 @@ In this section you can find news about what we are working on the coming versio
 * [x] Tested in the main web browser engines.
 
 ### Way to use it
-🔔 If you are thinking to try the Alpha version, please consider do **not implement it in Production environments**. 
-
-In this version you can filter a specific type of voice `en`, `es`, `it`, etcetera, by defining the desired ISO language code in the `languageFilter` property.
+🔔 If you are thinking to try the Alpha version, please consider do **not implement it in Production environments**. This version able you to filter a specific type of voice `en`, `es`, `it`, etcetera, by defining the desired ISO language code in the `languageFilter` property.
 
 ```javascript
 Speakit.languageFilter = "it-IT"
 ```
 
-After apply this filter, when you call the `.getVoices()` method you will get just the available voices for the selected `ISO Language`.
+After apply this filter, when call the `.getVoices()` method, you will get just the available voices for the selected `ISO Language`.
 
 ```javascript
 Speakit.getVoices()
@@ -335,18 +321,49 @@ Also the `totalAvailableVoices` property will return the proper number of voices
 
 ### Another proposal for filtering
 
-According to some tests, we propose to change a part of the `.languageFilter` property to get more ways to apply a language filter.
+Another more flexible way to use the `.languageFilter` property is by tipying the starting part of the ISO language code:
 
-The new way we are testing gives you more flexibility to filter languages using just a part of the ISO language code. Here is a sample:
 ```javascript
 Speakit.languageFilter = "es-"
 ```
-This sample code will bring you a list of spanish languages available including all the different accents: `Bolivian`, `Peruvian`, `Argentinian`, `Chilean`, etc. 
+
+This will bring you a list of spanish languages available including all the different accents: `Bolivian`, `Peruvian`, `Argentinian`, `Chilean`, etc. 
+
+You can also filter different languages used in a specific country by tipying the final part of it:
 
 ```javascript
 Speakit.languageFilter = "-CA"
 ```
-This other sample code will bring you a list of all canadian languages available including the different languages using in this country: `en` and `fr`.
+
+This will bring you the list of all official canadian languages available including of course: `en` and `fr`.
+
+### The .readText() method second parameter behavior
+
+According to the previous way to use this method, we've implemented a default and two fallback behavior for the second parameter.
+
+1. If you send it when you call the .readText() method, Speakit-JS will use it by default. 
+2. If you don't send it, Speakit-JS will seek the value defined in the `.languageFilter` property. Please, ensure in this case to define in the mentioned property the complete ISO language code ('it-IT').
+3. If you don't send it and don't specify a value in the `.languageFilter` property, Speakit-JS will use 'en-GB' as a language default.
+
+```javascript
+// First example
+Speakit.readText("This is a text for reproducing it by using JS SpeechSynthesis.", 
+                 "en-NZ")
+```
+
+```javascript
+// Second example
+// .languageFilter = 'en-CA'
+Speakit.readText("This is a text for reproducing it by using JS SpeechSynthesis.", 
+                 "")
+```
+
+```javascript
+// Third example
+// .languageFilter = ''
+Speakit.readText("This is a text for reproducing it by using JS SpeechSynthesis.", 
+                 "")
+```
 
 
 ### About the tests
