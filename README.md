@@ -301,8 +301,8 @@ SpeechSynthesis API boasts good compatibility with most of web browsers, as it w
 We finally implemented and tested deeply the following new features over Speakit-JS library.
 
 * [x] Specify an ISO Code language to filter the `.getVoices()` method results.
-* [x] Adding the filter behaivour to the `.getVoices()` method.
-* [x] Adding the fallback behaivour to the `.getVoices()` method.
+* [x] Adding the filter behavior to the `.getVoices()` method.
+* [x] Adding the fallback behavior to the `.getVoices()` method.
 * [x] Tested in the main web browser engines.
 
 ### Way to use it
@@ -373,7 +373,7 @@ Speakit.readText("This is a text for reproducing it by using JS SpeechSynthesis.
 
 
 ### About the tests
-**All the tests** over the main web browser engines throws good results except with **Apple Safari** desktop version. The Apple's web browser has a very limited support for its internal voices and the filtering method can't get a proper behaivour when it is implemented. We need to run more tests to find the best solution and to achive the better experience with the available voices in this  particular web browser.
+**All the tests** over the main web browser engines throws good results except with **Apple Safari** desktop version. The Apple's web browser has a very limited support for its internal voices and the filtering method can't get a proper behavior when it is implemented. We need to run more tests to find the best solution and to achive the better experience with the available voices in this  particular web browser.
 
 We still did not tests over **Safari Mobile**. If you can do it, please send us your feedback about the experience on it.
 
