@@ -306,7 +306,10 @@ We finally implemented and tested deeply the following new features over Speakit
 * [x] Tested in the main web browser engines.
 
 ### Way to use it
+`
 🔔 Consider **avoid to implement the Alpha version in Production environments**. 
+`
+
 This version able you to filter a specific type of voice `en`, `es`, `it`, etcetera, by defining the desired ISO language code in the `languageFilter` property.
 
 ```javascript
