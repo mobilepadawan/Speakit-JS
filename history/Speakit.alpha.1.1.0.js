@@ -2,7 +2,7 @@ class Speakit extends SpeechSynthesis {
     static utteranceRate = 1.2
     static utterancePitch = 1.1
     static totalAvailableVoices = 0
-    static languageFilter = ""    // U can specify here an ISO language to filter the voices
+    static languageFilter = ""    // U can specify here an ISO language to force filtering the available voices
     static totalVoices = []
 
     static #getAvailableVoices() {
