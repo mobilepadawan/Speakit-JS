@@ -46,10 +46,10 @@ You can install `Speakit JS library` by downloading the JS Library from the `/SR
 You don't need to use the `defer` attribute for the script tag, and there's no need to reference the library at the bottom of an HTML file. The minified version has a weight of only `2KB` ⚖️, making it lightweight. The unminified version, recommended for testing and improvement purposes, has a weight of only `3KB` 🙂.
 
 ```
-🔔 In the comming weeks you'll have
-an ES6 Module * version of this library.
+🔔 In the comming weeks of february 2025 you'll receive an ES6 Module version of this library.
+We also will preserve the *CDN* version of this library.
+We are finishing then testing process of all its functions.
 
-We are in process of testing all this functions.
 Stay tuned!
 ```
 
