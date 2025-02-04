@@ -1,5 +1,5 @@
 # Speakit JS
-Elevate your frontend web applications with the power of JavaScript speech synthesis but easily simplified. Make your users to listen to your written content with just two lines of code!
+Elevate your frontend web applications with the power of JavaScript speech synthesis but easily simplified. Make your users to listen to your written content with just two lines of code! 
 
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-red?style=for-the-badge&logo=javascript)
 
