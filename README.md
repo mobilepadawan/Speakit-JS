@@ -5,7 +5,7 @@ Elevate your frontend web applications with the power of JavaScript speech synth
 
 ![MIT License](https://img.shields.io/npm/l/toastify-js)
 
-[If you like this Project: ](https://www.buymeacoffee.com/invite/mobilepadawan)
+[If you like this Project, BUY ME A COFFE ☕️ ](https://www.buymeacoffee.com/invite/mobilepadawan)
 
 <hr>
 
