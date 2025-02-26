@@ -5,6 +5,8 @@ Elevate your frontend web applications with the power of JavaScript speech synth
 
 ![MIT License](https://img.shields.io/npm/l/toastify-js)
 
+If you like this Project: ([https://img.shields.io/npm/l/toastify-js](https://www.buymeacoffee.com/invite/mobilepadawan)
+
 <hr>
 
 This library enables you to audibly reproduce any text from a web application in various languages. It utilizes the `SpeechSynthesis` API along with the `SpeechSynthesisUtterance` API to regulate the audio speed, pitch, and voice selection (male or female) across different languages (*) and accents.
