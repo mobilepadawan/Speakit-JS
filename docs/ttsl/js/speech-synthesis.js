@@ -40,8 +40,10 @@ function mainFunction() {
 
 mainFunction()
 
-textFilter.addEventListener("search", async ()=> {
-    if (textFilter.value.trim() !== "") {
+// textFilter.addEventListener("search", async ()=> {
+//     if (textFilter.value.trim() !== "") {
+textFilter.addEventListener("keypress", async (e)=> {
+    if (textFilter.value.trim() !== "" && e.key === "Enter") {
         document.body.style.cursor = "progress"
         const paramToFilter = textFilter.value.trim()
         const voices = await Speakit.getVoices()
