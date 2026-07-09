@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpeakitJS - Next-Gen Web Text-to-Speech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/speak-64.png" type="image/png">
+    <meta name="description" content="Speakit JS is a JavaScript library designed to facilitate the implementation of the Speech Synthesis API.">
+    <link rel="canonical" href="https://mobilepadawan.github.io/Speakit-JS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="author" content="Fernando Omar Luna - @mobilepadawan">
+    <!-- OpenGraph Metatags --> 
+    <meta property="og:title" content="Speak-it JS: a JavaScript Library">
+    <meta property="og:description" content="Speakit JS is a JavaScript library designed to facilitate the implementation of the Speech Synthesis API.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dialogJS2-default-theme.min.css">
+    <script type="module" src="assets/js/index.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">SpeakitJS <span>v1.1.0</span></div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#code">Examples</a>
+            <a href="#demo">Live Demo</a>
+            <a href="#contact">Contact & Donate</a>
+        </nav>
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="full-page hero-section dark-rainbow-loop">
+        <div class="hero-content">
+            <h1>Elevate Your Web Apps with Crystal-Clear Speech Synthesis</h1>
+            <p>An ultra-lightweight, promise-based wrapper for the Web Speech API. Deliver natural, fluid, and robust Text-to-Speech capabilities in just one line of code.</p>
+            <div class="hero-buttons">
+                <a href="#demo" class="btn btn-primary">Try Live Demo</a>
+                <a href="#code" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Features / Benefits -->
+    <section id="features" class="full-page features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose SpeakitJS?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-icon">🪶</div>
+                    <h3>Ultra-Lightweight</h3>
+                    <p>At only 2KB, SpeakitJS adds powerful audio features to your stack without slowing down your client load times or bloating production build sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>One-Line Implementation</h3>
+                    <p>Initialize, pass text strings, and configure playbacks natively with zero boilerplate. It is designed to be elegant, clean, and immediately productive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Smart Language Filters</h3>
+                    <p>Seamlessly query, narrow down, and isolate voices based on precise ISO/BCP 47 language locales such as Argentine Spanish, Italian, or US English.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Leverages Natural Cloud Voices</h3>
+                    <p>Unlocks advanced premium neural and remote voices natively rendered within modern browser architectures like Google Chrome and Microsoft Edge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Code Examples -->
+    <section id="code" class="full-page code-section">
+        <div class="container">
+            <h2 class="section-title">Implementation Examples</h2>
+            <p class="section-subtitle">Copy and paste these snippets to instantly integrate SpeakitJS into your project workspace.</p>
+            
+            <div class="code-tabs-container">
+                <!-- Head Reference -->
+                <div class="code-block-wrapper">
+                    <div class="code-header">
+                        <span>1. Include Library in &lt;head&gt;</span>
+                        <button class="copy-btn" id="code-head">
+                            COPY
+                        </button>
+                    </div>
+                    <pre><code id="code-head">&lt;!-- Reference manually the SpeakitJS production distribution script --&gt;
+&lt;script src="Speakit.1.1.0.cdn.min.js"&gt;&lt;/script&gt;
+
+
+&lt;!-- Or import the Speakit JS Class from the 'JS module' version. --&gt;
+import { Speakit } from 'Speakit.1.1.0.min.js';
+
+
+&lt;!-- No dependences nedded to put Speakit to talk. --&gt;
+</code></pre>
+                </div>
+
+                <!-- 2 Parameters Example -->
+                <div class="code-block-wrapper">
+                    <div class="code-header">
+                        <span>2. Invocation with 2 Parameters (Language Fallback)</span>
+                        <button class="copy-btn" id="code-2param">COPY</button>
+                    </div>
+                    <pre><code id="code-2param">// Global adjustments for volume, pitch, and playback rate
+Speakit.languageFilter = "es-AR"; // Filter for Argentine Spanish
+Speakit.utteranceVolume = 0.8;    // Scale from 0.0 to 1.0
+Speakit.utterancePitch = 1.0;     // Pitch inflection range
+Speakit.utteranceRate = 1.05;     // Speech rate velocity
+
+// Read text using: text content and target language code
+Speakit.readText(
+    "Hola, bienvenido. Esta es una prueba de reproducción usando dos parámetros en SpeakitJS.", 
+    Speakit.languageFilter
+)
+.then(() => console.log("Speech completed successfully!"))
+.catch(err => console.error("An error occurred:", err));</code></pre>
+                </div>
+
+                <!-- 3 Parameters Example -->
+                <div class="code-block-wrapper">
+                    <div class="code-header">
+                        <span>3. Invocation with 3 Parameters (Explicit Voice Engine)</span>
+                        <button class="copy-btn" id="code-3param">COPY</button>
+                    </div>
+                    <pre><code id="code-3param">async function speakWithExplicitEngine() {
+    // Configure default properties and target filter
+    Speakit.languageFilter = "es-AR"; 
+    Speakit.utteranceVolume = 0.9;
+    Speakit.utterancePitch = 1.1;
+    Speakit.utteranceRate = 1.0;
+    
+    // Load voices from browser engine cache
+    const voices = await Speakit.getVoices();
+    
+    // Look for a specific natural or local voice matching criteria
+    const selectedVoice = voices.find(v => v.name.includes("Natural") || v.lang === "es-AR");
+    const voiceName = selectedVoice ? selectedVoice.name : voices[0].name;
+
+    // Invoke text, language signature, and exact voice model name
+    Speakit.readText(
+        "Reproduciendo texto de prueba con alta precisión usando tres parámetros configurados.", 
+        Speakit.languageFilter, 
+        voiceName
+    )
+    .then(() => console.log("Explicit speech synthesis finished."))
+    .catch(err => console.error("Playback error:", err));
+}
+
+speakWithExplicitEngine();</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Live Demo Sandbox -->
+    <section id="demo" class="full-page demo-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Live Playground</h2>
+            <p class="section-subtitle">Test out SpeakitJS configuration variables directly from your current browser environment.</p>
+            
+            <div class="sandbox-card">
+                <div class="sandbox-row">
+                    <div class="form-group">
+                        <label for="iso-filter">ISO Language Filter</label>
+                        <input type="text" 
+                               id="iso-filter" 
+                               placeholder="e.g., es-AR, en-US, it-IT" 
+                               value="es-AR"
+                               title="Type an ISO language and press Enter key.">
+                    </div>
+                    <div class="form-group">
+                        <label for="voice-select">Available System Voices</label>
+                        <select id="voice-select">
+                            <option value="">-- Load or Filter Voices --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sandbox-row">
+                    <div class="form-group full-width">
+                        <label for="text-input">Speech Content Input Source</label>
+                        <textarea id="text-input" placeholder="Type or paste any text block content here to test voice rendering engines...">¡Hola! SpeakitJS está funcionando a la perfección en esta landing page.</textarea>
+                    </div>
+                </div>
+
+                <div class="sandbox-actions">
+                    <button id="btn-speak" class="btn btn-primary btn-large">🔊 Synthesize Speech</button>
+                </div>
+
+                <!-- <div class="sandbox-row">
+                    <p class="message-to-users">Safari and Firefox based web browser has a 'particular' way to drive and expose the list of voices, and this can cause unexpected behavior in this Selection combo box.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Contact & Donation -->
+    <section id="contact" class="full-page contact-section">
+        <div class="container split-container">
+            <!-- Left Side: Contact Form -->
+            <div class="contact-box">
+                <h3>Get in Touch</h3>
+                <p>Have an interesting project implementation or want to contribute? Drop a message!</p>
+                <form id="contact-form" onsubmit="event.preventDefault(); alert('Message logged successfully! (Mock Demo)');">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" required placeholder="name@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-comments">Comments</label>
+                        <textarea id="contact-comments" required rows="4" placeholder="Write your inquiry here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Right Side: Buy Me a Coffee Support -->
+            <div class="donate-box">
+                <h3>Support the Project</h3>
+                <p>If SpeakitJS helped you build a cleaner interface or saved development time, consider fueling further iterations with a coffee.</p>
+                <div class="qr-placeholder-container">
+                    <div class="qr-box">
+                        <div class="qr-graphic">
+                            <img src="assets/images/qr-code.png" alt="Buy Me a Coffee QR code" title="Scan to donate for maintaining our Projects">
+                        </div>
+                    </div>
+                </div>
+                <p class="donate-note">Keep this community-driven, open-source library evolving!</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

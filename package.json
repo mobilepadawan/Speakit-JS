@@ -1,0 +1,26 @@
+{
+  "name": "speakit-js",
+  "version": "1.1.0",
+  "author": "Fernando O. Luna <ferproonline@gmail.com> (http://ferpro.online/)",
+  "description": "Speakit-JS: Elevate your web applications with the power of JavaScript speech synthesis. Make your users listen to your content with just two lines of code!",
+  "main": "dist/Speakit.1.1.0.min.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/Speakit.1.1.0.min.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobilepadawan/Speakit-JS"
+  },
+  "keywords": [ "Speech Synthesis", "TTS", "Text To Speech", "Synthesized Voice", "speech-synthesis", "speech", "audio", "web-speech-api", "speechSynthesis", "browser-tts"],
+  "license": "MIT",
+ "bugs": {
+        "url": "https://github.com/mobilepadawan/Speakit-JS/issues",
+        "email": "ferproonline@gmail.com"
+    },
+  "homepage": "https://mobilepadawan.github.io/Speakit-JS/website"
+}
