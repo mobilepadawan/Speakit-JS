@@ -29,9 +29,9 @@ You can customize the speech playback attributes and filter languages before ini
 | :--- | :--- | :--- | :--- |
 | `Speakit.utteranceRate` | `Number` | `1.1` | The speed/tempo of the spoken audio. |
 | `Speakit.utterancePitch` | `Number` | `1.1` | The pitch level of the voice. |
-| `Speakit.utteranceVolume` | `Number` | `0.5` | The volume level (ranges from `0` to `1`). |
+| `Speakit.utteranceVolume` 🆕| `Number` | `0.5` | The volume level (ranges from `0` to `1`). |
 | `Speakit.languageFilter` | `String` | `""` | An ISO language string (e.g., `"es-AR"`, `"en-US"`, `"it-IT"`) to filter out available voices. |
-| `Speakit.numberOfAvailableVoices` | `Number` | `0` | Holds the count of available voices after `getVoices()` runs. |
+| `Speakit.numberOfAvailableVoices` 🆕| `Number` | `0` | Holds the count of available voices after `getVoices()` runs. |
 | `Speakit.totalAvailableVoices` | `Number` | `0` | *Deprecated (will be removed in v2.0)*. Use `numberOfAvailableVoices` instead. |
 | `Speakit.totalVoices` | `Array` | `[]` | Internal cache array containing loaded voice records. |
 
@@ -41,7 +41,7 @@ You can customize the speech playback attributes and filter languages before ini
 
 SpeakitJS exposes several static methods for controlling voice setups and execution flow:
 
-* **`async getVoices()`**: Fetches and returns an array of speech voices available on the client device. Applies the `languageFilter` constraint if declared.
+* **`Promise based getVoices()`**: Fetches and returns an array of speech voices available on the client device. Applies the `languageFilter` constraint if declared.
 * **`readText(text, lang, nameOfVoice)`**: Synthesizes a text string into spoken word audio. It returns a Promise that resolves when the audio completes and rejects if an error surfaces.
 * **`isSpeaking()`**: Returns `true` if an utterance is currently in the progress of being spoken.
 * **`isPaused()`**: Returns `true` if speech output is currently paused.
