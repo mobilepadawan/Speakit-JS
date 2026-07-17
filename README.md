@@ -132,7 +132,7 @@ SpeakitJS operates on top of standard Web Speech API implementations `(window.sp
 
 ## About & License
 
-Copyright 2024 - 2026: **Fernando Omar Luna** - mobilepadawan.
+Copyright 2024 - 2026: **Fernando Omar Luna** - mobilepadawan. From 🇦🇷 with ❤️.
 
 Feel free to use, distribute, or modify this class library across personal or commercial projects. If you enjoy this tool, consider dropping an email to ferproonline [at] gmail [dot] com or sending a direct message via Twitter/X (@mobile padawan) to share your implementation stories or simply say hello!
 
