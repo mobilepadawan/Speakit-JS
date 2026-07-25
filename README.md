@@ -6,6 +6,8 @@ SpeakitJS is an ultra-lightweight `(2kb)`, promise-based wrapper class built on 
 
 ![MIT License](https://img.shields.io/npm/l/toastify-js)
 
+[![](https://data.jsdelivr.com/v1/package/npm/speakit-js/badge)](https://www.jsdelivr.com/package/npm/speakit-js)
+
 [If you like this Project, BUY ME A COFFE ☕️ ](https://www.buymeacoffee.com/invite/mobilepadawan)
 
 ## Table of Contents
